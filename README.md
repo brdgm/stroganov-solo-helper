@@ -1,4 +1,4 @@
-# Ark Nova Solo Helper
+# Stroganov Solo Helper
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=brdgm_stroganov-solo-helper&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=brdgm_stroganov-solo-helper)
 
