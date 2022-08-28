@@ -12,6 +12,7 @@ import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import { useStore } from '@/store'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
+import NavigationState from '@/util/NavigationState'
 
 export default defineComponent({
   name: 'RoundTurn',
@@ -23,7 +24,11 @@ export default defineComponent({
     const store = useStore()
     const route = useRoute()
 
-    return { t }
+    const state = new NavigationState(route, store)
+    const year = state.year
+    const season = state.season
+
+    return { t, year, season }
   },
   computed: {
     backButtonRouteTo() : string {

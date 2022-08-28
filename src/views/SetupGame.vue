@@ -4,9 +4,9 @@
   <Players/>
   <DifficultyLevel/>
 
-  <router-link to="/year/1/season/1" class="btn btn-primary btn-lg mt-4">
+  <button to="/year/1/season/1" class="btn btn-primary btn-lg mt-4" @click="startGame">
     {{t('action.startGame')}}
-  </router-link>
+  </button>
 
   <FooterButtons endGameButtonType="abortGame"/>
 </template>
@@ -17,6 +17,8 @@ import { useI18n } from 'vue-i18n'
 import Players from '@/components/setup/Players.vue'
 import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
+import { useRoute } from 'vue-router'
+import { useStore } from '@/store'
 
 export default defineComponent({
   name: 'SetupGame',
@@ -27,7 +29,15 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
+    useStore()
+    useRoute()
     return { t }
+  },
+  methods: {
+    startGame() {
+      this.$store.commit('endGame')  // reset game state
+      this.$router.push('/year/1/season/1')
+    }
   }
 })
 </script>

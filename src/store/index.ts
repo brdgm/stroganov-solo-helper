@@ -1,9 +1,11 @@
+import CardDeck from '@/services/CardDeck'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Opponent from '@/services/enum/Opponent'
 import PlayerColor from '@/services/enum/PlayerColor'
 import Strategy from '@/services/enum/Strategy'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
+import * as _ from "lodash"
 
 const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "store"
 
@@ -11,21 +13,27 @@ export interface State {
   language: string
   baseFontSize: number
   setup: Setup
-  rounds: Round[]
+  years: Year[]
 }
 export interface Setup {
   difficultyLevel: DifficultyLevel
   playerSetup: PlayerSetup
+  actualStrategy?: Strategy[]
 }
 export interface PlayerSetup {
   botCount: number
   opponent: Opponent[]
   strategy: Strategy[]
-  actualStrategy: Strategy[]
   playerColors: PlayerColor[]
 }
-export interface Round {
-  round: number
+export interface Year {
+  year: number
+  seasons: Season[]
+}
+export interface Season {
+  year: number
+  season: number
+  cardDeck: CardDeckPersistence[]
 }
 export interface CardDeckPersistence {
   deck: number[]
@@ -51,11 +59,10 @@ export const store = createStore<State>({
         botCount: 1,
         opponent: [Opponent.IVAN],
         strategy: [Strategy.NONE],
-        actualStrategy: [Strategy.NONE],
         playerColors: [PlayerColor.YELLOW,PlayerColor.BLUE,PlayerColor.RED,PlayerColor.GREEN]
       }
     },
-    rounds: []
+    years: []
   },
   mutations: {
     // reload state from local storage
@@ -74,8 +81,24 @@ export const store = createStore<State>({
     setupDifficultyLevel(state : State, level: number) {
       state.setup.difficultyLevel = level
     },
+    setupActualStrategy(state : State, strategy: Strategy[]) {
+      state.setup.actualStrategy = strategy
+    },
+    season(state : State, season: Season) {
+      let year = state.years.find(item => item.year == season.year)
+      if (!year) {
+        year = {
+          year: season.year,
+          seasons: []
+        }
+        state.years.push(year)
+      }
+      year.seasons = _.remove(year.seasons, item => item.season == season.season)
+      year.seasons.push(season)
+    },
     endGame(state : State) {
-      state.rounds = []
+      state.setup.actualStrategy = undefined
+      state.years = []
     },
     zoomFontSize(state : State, baseFontSize: number) {
       state.baseFontSize = baseFontSize
