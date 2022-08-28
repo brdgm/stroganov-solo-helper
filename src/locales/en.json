@@ -23,7 +23,7 @@
       "title": "Difficulty Level",
       "easy": "Easy",
       "hard": "Hard",
-      "mediumInfo": "Whenever Ivan doesn’t have the right fur to fully perform his additional action, he gains 1 coin instead.",
+      "mediumInfo": "Whenever Ivan doesn't have the right fur to fully perform his additional action, he gains 1 coin instead.",
       "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead."
     }
   },
@@ -64,7 +64,7 @@
     "outposts-landscape-tiles": "Outposts & Landscape Tiles",
     "outposts-tsars-wishes": "Outposts & Tsar's Wishes",
     "trophies-landscape-tiles": "Trophies & Landscape Tiles",
-    "trophies-tsars-wishes": "Trophies & Tsar’s Wishes",
+    "trophies-tsars-wishes": "Trophies & Tsar's Wishes",
     "landscape-tiles-tsars-wishes": "Landscape Tiles & Tsar's Wishes"
   },
   "seasonName": {
