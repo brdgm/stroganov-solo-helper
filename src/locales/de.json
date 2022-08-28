@@ -28,11 +28,18 @@
     }
   },
   "season": {
-    "title": "Jahr {year}"
+    "title": "Jahr {year}",
+    "botActions": {
+      "turn": "{opponent}s Zug"
+    }
   },
   "opponent": {
     "ivan": "Ivan",
-    "katyusha": "Katjuscha (schwerer)"
+    "katyusha": "Katjuscha"
+  },
+  "opponentSuffix": {
+    "ivan": "",
+    "katyusha": "(schwerer)"
   },
   "strategy": {
     "none": "Keine (Zufällige Kartenwahl)",

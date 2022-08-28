@@ -28,11 +28,18 @@
     }
   },
   "season": {
-    "title": "Year {year}"
+    "title": "Year {year}",
+    "botActions": {
+      "turn": "{opponent}'s turn"
+    }
   },
   "opponent": {
     "ivan": "Ivan",
-    "katyusha": "Katyusha (harder)"
+    "katyusha": "Katyusha"
+  },
+  "opponentSuffix": {
+    "ivan": "",
+    "katyusha": "(harder)"
   },
   "strategy": {
     "none": "None (random cards)",

@@ -1,11 +1,9 @@
-import CardDeck from '@/services/CardDeck'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Opponent from '@/services/enum/Opponent'
 import PlayerColor from '@/services/enum/PlayerColor'
 import Strategy from '@/services/enum/Strategy'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
-import * as _ from "lodash"
 
 const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "store"
 
@@ -93,7 +91,7 @@ export const store = createStore<State>({
         }
         state.years.push(year)
       }
-      year.seasons = _.remove(year.seasons, item => item.season == season.season)
+      year.seasons = year.seasons.filter(item => item.season != season.season)
       year.seasons.push(season)
     },
     endGame(state : State) {

@@ -7,11 +7,15 @@ import CardDeck from "@/services/CardDeck"
 import getActualStrategy from "./getActualStrategy"
 import Strategy from "@/services/enum/Strategy"
 import Season from "@/services/enum/Season"
+import PlayerColor from "@/services/enum/PlayerColor"
+import Opponent from "@/services/enum/Opponent"
 
 export default class NavigationState {
 
   readonly difficultyLevel : DifficultyLevel
   readonly botCount : number
+  readonly botOpponent : Opponent[]
+  readonly botPlayerColors : PlayerColor[]
   readonly year : number
   readonly season : number
   readonly cardDeck? : CardDeck[]
@@ -20,6 +24,8 @@ export default class NavigationState {
     const setup = store.state.setup
     this.difficultyLevel = setup.difficultyLevel
     this.botCount = setup.playerSetup.botCount
+    this.botOpponent = setup.playerSetup.opponent
+    this.botPlayerColors = setup.playerSetup.playerColors.slice(1)
 
     this.year = parseInt(route.params['year'] as string)
     this.season = parseInt(route.params['season'] as string)
@@ -62,7 +68,7 @@ export default class NavigationState {
   }
 
   private static getPreviousCardDecks(year : number, season : number, store : Store<State>) : CardDeck[] | undefined {
-    let seasonData = undefined
+    let seasonData
     if (season > 1) {
       const yearData = store.state.years[year - 1]
       if (yearData) {
@@ -72,7 +78,7 @@ export default class NavigationState {
     else {
       const yearData = store.state.years[year - 2]
       if (yearData) {
-        seasonData = yearData.seasons[Season.AUTUMN]
+        seasonData = yearData.seasons[yearData.seasons.length - 1]
       }
     }
     if (seasonData) {

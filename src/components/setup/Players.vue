@@ -34,7 +34,7 @@
       </div>
       <div class="col-8 col-md-6">
         <select class="form-select" :id="`opponent${bot}`" v-model="opponent[bot-1]">
-          <option v-for="item of opponents" :key="item" :value="item">{{t('opponent.' + item)}}</option>
+          <option v-for="item of opponents" :key="item" :value="item">{{t('opponent.' + item)}} {{t('opponentSuffix.' + item)}}</option>
         </select>
       </div>
     </div>
@@ -67,13 +67,13 @@ import { useStore } from '@/store'
 import Opponent from '@/services/enum/Opponent'
 import Strategy from '@/services/enum/Strategy'
 import PlayerColor from '@/services/enum/PlayerColor'
-import PlayerColorPicker from './PlayerColorPicker.vue'
+import PlayerColorPicker from '../structure/PlayerColorPicker.vue'
 
 export default defineComponent({
   name: 'Players',
   components: {
     PlayerColorPicker
-  },
+},
   setup() {
     const { t } = useI18n()
     useStore()

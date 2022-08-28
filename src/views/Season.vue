@@ -5,6 +5,8 @@
     {{t(`seasonName.${seasonName}`)}}
   </h1>
 
+  <SeasonActions v-if="season != 4" :navigationState="state"/>
+
   <router-link v-if="nextButtonRouteTo" :to="nextButtonRouteTo" class="btn btn-primary btn-lg mt-3">
     {{t('action.next')}}
   </router-link>
@@ -21,13 +23,15 @@ import FooterButtons from '@/components/structure/FooterButtons.vue'
 import NavigationState from '@/util/NavigationState'
 import Icon from '@/components/structure/Icon.vue'
 import Season from '@/services/enum/Season'
+import SeasonActions from '@/components/turn/SeasonActions.vue'
 
 export default defineComponent({
   name: 'RoundTurn',
   components: {
     FooterButtons,
-    Icon
-},
+    Icon,
+    SeasonActions
+  },
   setup() {
     const { t } = useI18n()
     const store = useStore()
@@ -37,7 +41,7 @@ export default defineComponent({
     const year = state.year
     const season = state.season
 
-    return { t, year, season }
+    return { t, year, season, state }
   },
   computed: {
     backButtonRouteTo() : string {
