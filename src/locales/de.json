@@ -2,7 +2,7 @@
   "gameTitle": "Stroganov",
   "home": {
     "title": "Stroganov Solo Helper",
-    "play1": "Spiele gegen Ivan, den Solospiel-Gegner von <a href='https://boardgamegeek.com/boardgame/323156/stroganov' target='_blank' rel='noopener'><b>Stroganov</b></a>.",
+    "play1": "Spiele gegen Ivan oder Katjuscha, die Solospiel-Gegner von <a href='https://boardgamegeek.com/boardgame/323156/stroganov' target='_blank' rel='noopener'><b>Stroganov</b></a>.",
     "play2": "Diese Applikation ersetzt die Automa-Karten, und vereinfacht das Aufsetzen mit verschiedenen Schwierigkeitsgraden.",
     "feedback": "Discussion and Feedback:"
   },
@@ -10,15 +10,34 @@
     "title": "Spielaufbau",
     "players": {
       "title": "Gegner",
-      "botCount": "Automa",
-      "botCountItem": "{count} Automa | {count} Automas (Experimentell)"
+      "botCount": "Anzahl der Gegner",
+      "multipleBots": "Das Spiel gegen mehrere Solo-Gegner ist offiziell nicht unterstützt. Du benötigst weitere Kopien von Ivans Tableau.",
+      "botCountItem": "{count} Automa | {count} Automas (Experimentell)",
+      "opponent": "Gegner | Gegner {bot}",
+      "strategy": "Strategie | Strategie {bot}"
     },
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
-      "hard": "Schwer"
+      "hard": "Schwer",
+      "mediumInfo": "Falls Iwan nicht genügend Felle besitzt, um seine zusätzliche Aktion komplett auszuführen, erhält er stattdessen 1 Münze.",
+      "hardInfo": "Falls Iwan 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem Aktionsfeld Handel erhält, erhält er stattdessen 1 Münze."
     }
-  }, 
+  },
+  "opponent": {
+    "ivan": "Ivan",
+    "katyusha": "Katjuscha (schwerer)"
+  },
+  "strategy": {
+    "none": "Keine (Zufällige Kartenwahl)",
+    "hidden": "Versteckt (Strategie zufällig gewählt)",
+    "outposts-trophies": "Außenposten und Trophäen",
+    "outposts-landscape-tiles": "Außenposten und Landschaftsplättchen",
+    "outposts-tsars-wishes": "Außenposten und Wünsche des Zaren",
+    "trophies-landscape-tiles": "Trophäen und Landschaftsplättchen",
+    "trophies-tsars-wishes": "Trophäen und Wünsche des Zaren",
+    "landscape-tiles-tsars-wishes": "Landschaftsplättchen und Wünsche des Zaren"
+  },
   "notfound": {
     "title": "Nicht Gefunden"
   },
@@ -34,9 +53,7 @@
     "cancel": "Abbrechen",
     "backToHome": "Zurück zum Anfang",
     "back": "Zurück",
-    "close": "Schließen",
-    "reset": "Zurücksetzen",
-    "pass": "Passen"
+    "close": "Schließen"
   },
   "footer": {
     "credits": "Credits"

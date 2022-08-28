@@ -4,8 +4,8 @@
   <Players/>
   <DifficultyLevel/>
 
-  <router-link to="/setupGameAutoma" class="btn btn-primary btn-lg mt-4">
-    {{t('setupGameAutoma.title')}}
+  <router-link to="/year/1/season/1" class="btn btn-primary btn-lg mt-4">
+    {{t('action.startGame')}}
   </router-link>
 
   <FooterButtons endGameButtonType="abortGame"/>
