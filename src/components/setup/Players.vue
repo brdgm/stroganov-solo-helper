@@ -1,5 +1,16 @@
 <template>
-  <h3 class="mt-4 mb-3">{{t('setup.players.title')}}</h3>
+  <h3 class="mt-4 mb-3">{{t('setup.players.titlePlayer')}}</h3>
+
+  <div class="row mt-3" :key="playerColors[0]">
+    <div class="col-5 col-md-3">
+      <label for="playerCount" class="form-label">{{t('setup.players.playerColor', {index:1})}}</label>
+    </div>
+    <div class="col-5 col-md-3">
+      <PlayerColorPicker :model-value="playerColors[0]" @update:model-value="color => playerColorChanged(0, color)"/>
+    </div>
+  </div>  
+
+  <h3 class="mt-4 mb-3">{{t('setup.players.titleBot')}}</h3>
 
   <div class="row mt-3">
     <div class="col-4 col-md-3">
@@ -15,7 +26,8 @@
     <div class="offset-4 offset-md-3 col-8 col-md-8 text-muted small" v-html="t('setup.players.multipleBots')"></div>
   </div>
 
-  <template v-for="bot in botCount" :key="bot">
+  <template v-for="bot in botCount" :key="bot+playerColors[bot]">
+    <hr v-if="botCount > 1"/>
     <div class="row mt-3">
       <div class="col-4 col-md-3">
         <label :for="`opponent${bot}`" class="form-label">{{t('setup.players.opponent', {bot:bot}, botCount)}}</label>
@@ -36,6 +48,14 @@
         </select>
       </div>
     </div>
+    <div class="row mt-3">
+      <div class="col-5 col-md-3">
+        <label for="playerCount" class="form-label">{{t('setup.players.botColor', {index:bot}, botCount)}}</label>
+      </div>
+      <div class="col-5 col-md-3">
+        <PlayerColorPicker :model-value="playerColors[bot]" @update:model-value="color => playerColorChanged(bot, color)"/>
+      </div>
+    </div>  
   </template>
 
 </template>
@@ -46,9 +66,14 @@ import { useI18n } from 'vue-i18n'
 import { useStore } from '@/store'
 import Opponent from '@/services/enum/Opponent'
 import Strategy from '@/services/enum/Strategy'
+import PlayerColor from '@/services/enum/PlayerColor'
+import PlayerColorPicker from './PlayerColorPicker.vue'
 
 export default defineComponent({
   name: 'Players',
+  components: {
+    PlayerColorPicker
+  },
   setup() {
     const { t } = useI18n()
     useStore()
@@ -59,6 +84,7 @@ export default defineComponent({
       botCount: this.$store.state.setup.playerSetup.botCount,
       opponent: this.$store.state.setup.playerSetup.opponent,
       strategy: this.$store.state.setup.playerSetup.strategy,
+      playerColors: this.$store.state.setup.playerSetup.playerColors,
       opponents: Object.values(Opponent),
       strategies: Object.values(Strategy)
     }
@@ -79,6 +105,9 @@ export default defineComponent({
         this.storePlayerSetup()
       },
       deep: true
+    },
+    playerColors() {
+      this.storePlayerSetup()
     }
   },
   methods: {
@@ -94,8 +123,22 @@ export default defineComponent({
       this.$store.commit('setupPlayer', {
         botCount: this.botCount,
         opponent: this.opponent,
-        strategy: this.strategy
+        strategy: this.strategy,
+        playerColors: this.playerColors
       })
+    },
+    playerColorChanged(index : number, color : PlayerColor) {
+      const newPlayerColors = [...this.playerColors]
+      newPlayerColors[index] = color
+      for (let i=0; i<this.playerColors.length; i++) {
+        if (i!=index && newPlayerColors[i]==color) {
+          const newColor = Object.values(PlayerColor).find(c => !newPlayerColors.includes(c))
+          if (newColor) {
+            newPlayerColors[i] = newColor
+          }
+        }
+      }
+      this.playerColors = newPlayerColors
     }
   }
 })

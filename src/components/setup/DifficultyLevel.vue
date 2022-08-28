@@ -14,10 +14,12 @@
     </div>
   </div>
   <div class="row mt-3" v-if="difficultyLevel > 1">
-    <div class="offset-1 col-10 text-muted small" v-html="t('setup.difficultyLevel.mediumInfo')"></div>
-  </div>
-  <div class="row mt-3" v-if="difficultyLevel > 2">
-    <div class="offset-1 col-10 text-muted small" v-html="t('setup.difficultyLevel.hardInfo')"></div>
+    <div class="col-11 text-muted small">
+      <ul>
+        <li v-html="t('setup.difficultyLevel.mediumInfo')"></li>
+        <li v-if="difficultyLevel > 2" v-html="t('setup.difficultyLevel.hardInfo')"></li>
+      </ul>
+    </div>
   </div>
 
 </template>

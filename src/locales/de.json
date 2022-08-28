@@ -9,12 +9,15 @@
   "setup": {
     "title": "Spielaufbau",
     "players": {
-      "title": "Gegner",
+      "titlePlayer": "Spieler",
+      "playerColor": "Spieler-Farbe",
+      "titleBot": "Gegner",
       "botCount": "Anzahl der Gegner",
       "multipleBots": "Das Spiel gegen mehrere Solo-Gegner ist offiziell nicht unterstützt. Du benötigst weitere Kopien von Ivans Tableau.",
       "botCountItem": "{count} Automa | {count} Automas (Experimentell)",
       "opponent": "Gegner | Gegner {bot}",
-      "strategy": "Strategie | Strategie {bot}"
+      "strategy": "Strategie | Strategie {bot}",
+      "botColor": "Gegner-Farbe | Gegner-Farbe {bot}"
     },
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",

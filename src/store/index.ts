@@ -1,5 +1,6 @@
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Opponent from '@/services/enum/Opponent'
+import PlayerColor from '@/services/enum/PlayerColor'
 import Strategy from '@/services/enum/Strategy'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
@@ -20,6 +21,7 @@ export interface PlayerSetup {
   botCount: number
   opponent: Opponent[]
   strategy: Strategy[]
+  playerColors: PlayerColor[]
 }
 export interface Round {
   round: number
@@ -43,7 +45,8 @@ export const store = createStore<State>({
       playerSetup: {
         botCount: 1,
         opponent: [Opponent.IVAN],
-        strategy: [Strategy.NONE]
+        strategy: [Strategy.NONE],
+        playerColors: [PlayerColor.YELLOW,PlayerColor.BLUE,PlayerColor.RED,PlayerColor.GREEN]
       }
     },
     rounds: []

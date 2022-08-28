@@ -9,12 +9,15 @@
   "setup": {
     "title": "Setup Game",
     "players": {
-      "title": "Opponent",
+      "titlePlayer": "Player",
+      "playerColor": "Player Color",
+      "titleBot": "Opponent",
       "botCount": "Number of opponents",
       "multipleBots": "Playing against multiple solo opponents is not supported by the rules. You have to make copies of Ivans player board.",
       "botCountItem": "{count} Automa | {count} Automas (Experimental)",
       "opponent": "Opponent | Opponent {bot}",
-      "strategy": "Strategy | Strategy {bot}"
+      "strategy": "Strategy | Strategy {bot}",
+      "botColor": "Opponent Color | Opponent Color {bot}"
     },
     "difficultyLevel": {
       "title": "Difficulty Level",

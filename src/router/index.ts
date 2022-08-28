@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from '@/views/Home.vue'
 import NotFound from '@/views/NotFound.vue'
 import SetupGame from '@/views/SetupGame.vue'
+import Season from '@/views/Season.vue'
 
 const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "route"
 
@@ -15,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/setupGame',
     name: 'SetupGame',
     component: SetupGame
+  },
+  {
+    path: '/year/:year/season/:season',
+    name: 'Season',
+    component: Season
   },
   {
     path: '/:pathMatch(.*)*',
