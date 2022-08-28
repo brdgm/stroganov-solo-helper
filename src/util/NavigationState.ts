@@ -1,4 +1,3 @@
-import * as _ from "lodash"
 import DifficultyLevel from "@/services/enum/DifficultyLevel"
 import { State } from "@/store"
 import { RouteLocation } from "vue-router"
