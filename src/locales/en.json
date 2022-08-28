@@ -26,7 +26,10 @@
       "mediumInfo": "Whenever Ivan doesn’t have the right fur to fully perform his additional action, he gains 1 coin instead.",
       "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead."
     }
-  }, 
+  },
+  "season": {
+    "title": "Year {year}"
+  },
   "opponent": {
     "ivan": "Ivan",
     "katyusha": "Katyusha (harder)"
@@ -40,6 +43,12 @@
     "trophies-landscape-tiles": "Trophies & Landscape Tiles",
     "trophies-tsars-wishes": "Trophies & Tsar’s Wishes",
     "landscape-tiles-tsars-wishes": "Landscape Tiles & Tsar's Wishes"
+  },
+  "seasonName": {
+    "spring": "Spring",
+    "summer": "Summer",
+    "autumn": "Autumn",
+    "winter": "Winter"
   },
   "notfound": {
     "title": "Not Found"

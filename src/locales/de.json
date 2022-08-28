@@ -27,6 +27,9 @@
       "hardInfo": "Falls Iwan 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem Aktionsfeld Handel erhält, erhält er stattdessen 1 Münze."
     }
   },
+  "season": {
+    "title": "Jahr {year}"
+  },
   "opponent": {
     "ivan": "Ivan",
     "katyusha": "Katjuscha (schwerer)"
@@ -40,6 +43,12 @@
     "trophies-landscape-tiles": "Trophäen und Landschaftsplättchen",
     "trophies-tsars-wishes": "Trophäen und Wünsche des Zaren",
     "landscape-tiles-tsars-wishes": "Landschaftsplättchen und Wünsche des Zaren"
+  },
+  "seasonName": {
+    "spring": "Frühling",
+    "summer": "Sommer",
+    "autumn": "Herbst",
+    "winter": "Winter"
   },
   "notfound": {
     "title": "Nicht Gefunden"
