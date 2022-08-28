@@ -1,0 +1,96 @@
+{
+  "gameTitle": "Stroganov",
+  "home": {
+    "title": "Stroganov Solo Helper",
+    "play1": "Spiele gegen Ivan oder Katjuscha, die Solospiel-Gegner von <a href='https://boardgamegeek.com/boardgame/323156/stroganov' target='_blank' rel='noopener'><b>Stroganov</b></a>.",
+    "play2": "Diese Applikation ersetzt die Automa-Karten, und vereinfacht das Aufsetzen mit verschiedenen Schwierigkeitsgraden.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Spielaufbau",
+    "players": {
+      "titlePlayer": "Spieler",
+      "playerColor": "Spieler-Farbe",
+      "titleBot": "Gegner",
+      "botCount": "Anzahl der Gegner",
+      "multipleBots": "Das Spiel gegen mehrere Solo-Gegner ist offiziell nicht unterstützt. Du benötigst weitere Kopien von Ivans Tableau.",
+      "botCountItem": "{count} Automa | {count} Automas (Experimentell)",
+      "opponent": "Gegner | Gegner {bot}",
+      "strategy": "Strategie | Strategie {bot}",
+      "botColor": "Gegner-Farbe | Gegner-Farbe {bot}"
+    },
+    "difficultyLevel": {
+      "title": "Schwierigkeitsgrad",
+      "easy": "Leicht",
+      "hard": "Schwer",
+      "mediumInfo": "Falls Iwan nicht genügend Felle besitzt, um seine zusätzliche Aktion komplett auszuführen, erhält er stattdessen 1 Münze.",
+      "hardInfo": "Falls Iwan 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem Aktionsfeld Handel erhält, erhält er stattdessen 1 Münze."
+    }
+  },
+  "season": {
+    "title": "Jahr {year}",
+    "winter": "Der Gegner wählt das teuerste Liedplättchen (am weitesten rechts), das er mit Geschichtenpunkten zahlen kann.",
+    "actions": {
+      "turn": "{opponent}s Zug",
+      "tradeActionSpaceFur1": "Falls der Gegner 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem <b>Aktionsfeld Handel</b> erhält, erhält er stattdessen",
+      "tradeActionSpaceFur2": "."
+    },
+    "action": {
+      "move": "{steps} Schritte",
+      "or": "oder",
+      "ifEmpty": "(wenn leer)",
+      "ifPossible": "(wenn möglich)",
+      "claimLandscape": "Landschaftsplättchen beanspruchen (wenn leer)",
+      "visitVillage": "Dorf besuchen (Region des Kosaken)",
+      "outpost": "Außenposten bauen oder Außenposten erhalten",
+      "trophy": "Trophäe erhalten",
+      "yurt": "Jurte nutzen",
+      "tsar-wish": "Wunschkarte des Zaren nehmen",
+      "claim-landscape-full-cost": "Landschaftsplättchen beanspruchen mit vollen Kosten"
+    }
+  },
+  "opponent": {
+    "ivan": "Ivan",
+    "katyusha": "Katjuscha"
+  },
+  "opponentSuffix": {
+    "ivan": "",
+    "katyusha": "(schwerer)"
+  },
+  "strategy": {
+    "none": "Keine (Zufällige Kartenwahl)",
+    "hidden": "Versteckt (Strategie zufällig gewählt)",
+    "outposts-trophies": "Außenposten und Trophäen",
+    "outposts-landscape-tiles": "Außenposten und Landschaftsplättchen",
+    "outposts-tsars-wishes": "Außenposten und Wünsche des Zaren",
+    "trophies-landscape-tiles": "Trophäen und Landschaftsplättchen",
+    "trophies-tsars-wishes": "Trophäen und Wünsche des Zaren",
+    "landscape-tiles-tsars-wishes": "Landschaftsplättchen und Wünsche des Zaren"
+  },
+  "seasonName": {
+    "spring": "Frühling",
+    "summer": "Sommer",
+    "autumn": "Herbst",
+    "winter": "Winter"
+  },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist Du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist Du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen"
+  },
+  "footer": {
+    "credits": "Credits"
+  }
+}
