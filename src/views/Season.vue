@@ -6,6 +6,9 @@
   </h1>
 
   <SeasonActions v-if="season != 4" :navigationState="state"/>
+  <div v-else class="row mt-3 mb-3">
+    <div class="col" v-html="t('season.winter')"></div>
+  </div>
 
   <router-link v-if="nextButtonRouteTo" :to="nextButtonRouteTo" class="btn btn-primary btn-lg mt-3">
     {{t('action.next')}}

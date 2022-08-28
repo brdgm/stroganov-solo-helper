@@ -2,11 +2,10 @@
   <ol>
     <li>
       <Icon type="move" :name="`move-${moveEastSteps}`"/>
-      Move {{moveEastSteps}}
+      <span v-html="t('season.action.move',{steps:moveEastSteps})" class="desc"></span>
     </li>
     <li>
-      <icon name="hunting"/>:
-      
+      <icon name="hunting"/>:      
       <table class="hunting">
         <tr>
           <td><icon name="arrow" class="arrow" v-if="fur1Active"/></td>
@@ -21,41 +20,48 @@
           <td><icon name="fur-hunt" class="fur" :class="{inactive:!fur3Active}"/></td>
         </tr>
       </table>
-      
-      <span class="or">or</span>
-      {{huntCount}} <icon name="coin" class="coin"/> (if empty)
+      <span v-html="t('season.action.or')" class="or"></span>
+      <icon v-for="item in huntCount" :key="item" name="coin" class="coin"/>
+      <span v-html="t('season.action.ifEmpty')" class="desc"></span>
     </li>
     <li>
-      Buy Landscape (if empty)
-      <span class="or">or</span>
-      Visit village (cosack's region)
+      <span v-html="t('season.action.claimLandscape')"></span>
+      <span v-html="t('season.action.or')" class="or"></span>
+      <span v-html="t('season.action.visitVillage')"></span>
     </li>
     
-    <li v-if="extendedAction=='outpost'">
-      <icon name="fur-location" class="fur-location"/>
-      <icon name="arrow-grey" class="arrow-grey"/>
-      <icon name="outpost" class="outpost"/>
-      Build outpost or take new outpost
-    </li>
-    <li v-if="extendedAction=='trophy'">
-      <icon name="trophy" class="trophy"/>
-      Receive Trophy
-    </li>
-    <li v-if="extendedAction=='yurt'">
-      <icon name="fur-location" class="fur-location"/>
-      <icon name="arrow-grey" class="arrow-grey"/>
-      <icon name="yurt" class="yurt"/>
-      Use a Yurt
-    </li>
-    <li v-if="extendedAction=='tsar-wish'">
-      <icon name="fur-location" class="fur-location"/>
-      <icon name="arrow-grey" class="arrow-grey"/>
-      <icon name="tsar-wish-card" class="tsar-wish-card"/>
-      Take a Tsar's Wish
-    </li>
-    <li v-if="extendedAction=='claim-landscape-full-cost'">
-      <icon name="landscape-buy-full-cost" class="landscape-buy-full-cost"/>
-      Buy Landscape Tile with full cost (if possible)
+    <li>
+      <template v-if="extendedAction=='outpost'">
+        <icon name="fur-location" class="fur-location"/>
+        <icon name="arrow-grey" class="arrow-grey"/>
+        <icon name="outpost" class="outpost"/>
+        <span v-html="t('season.action.outpost')" class="desc"></span>
+      </template>
+      <template v-if="extendedAction=='trophy'">
+        <icon name="trophy" class="trophy"/>
+        <span v-html="t('season.action.trophy')" class="desc"></span>
+      </template>
+      <template v-if="extendedAction=='yurt'">
+        <icon name="fur-location" class="fur-location"/>
+        <icon name="arrow-grey" class="arrow-grey"/>
+        <icon name="yurt" class="yurt"/>
+        <span v-html="t('season.action.yurt')" class="desc"></span>
+      </template>
+      <template v-if="extendedAction=='tsar-wish'">
+        <icon name="fur-location" class="fur-location"/>
+        <icon name="arrow-grey" class="arrow-grey"/>
+        <icon name="tsar-wish-card" class="tsar-wish-card"/>
+        <span v-html="t('season.action.tsar-wish')" class="desc"></span>
+      </template>
+      <template v-if="extendedAction=='claim-landscape-full-cost'">
+        <icon name="landscape-buy-full-cost" class="landscape-buy-full-cost"/>
+        <span v-html="t('season.action.claim-landscape-full-cost')" class="desc"></span>
+      </template>
+      <template v-if="difficultyLevel > 1">
+        <span v-html="t('season.action.or')" class="or"></span>
+        <icon name="coin" class="coin"/>
+      </template>
+      <span v-else v-html="t('season.action.ifPossible')" class="desc"></span>
     </li>
 
   </ol>
@@ -81,6 +87,10 @@ export default defineComponent({
   props: {
     cardDeck: {
       type: CardDeck,
+      required: true
+    },
+    difficultyLevel: {
+      type: Number,
       required: true
     }
   },
@@ -117,6 +127,9 @@ export default defineComponent({
   li {
     margin-bottom: 1rem;
   }
+  .desc {
+    margin-left: 0.75rem;
+  }
   .hunting {
     display: inline;
     vertical-align: middle;
@@ -140,6 +153,8 @@ export default defineComponent({
   }
   .coin {
     height: 1.75rem;
+    margin-left: 0;
+    margin-right: 0;
   }
   .fur-location {
     height: 2.5rem;
@@ -154,18 +169,14 @@ export default defineComponent({
   }
   .tsar-wish-card {
     height: 2.75rem;
-    margin-right: 0.5rem;
   }
   .yurt {
     height: 2.5rem;
-    margin-right: 0.5rem;
   }
   .outpost {
     height: 5rem;
-    margin-right: 0.5rem;
   }
   .landscape-buy-full-cost {
     height: 4rem;
-    margin-right: 0.5rem;
   }
 </style>

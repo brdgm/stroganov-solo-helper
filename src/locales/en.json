@@ -29,8 +29,24 @@
   },
   "season": {
     "title": "Year {year}",
-    "botActions": {
-      "turn": "{opponent}'s turn"
+    "winter": "The opponent will take the most expensive (rightmost) song tile that he can pay for with story track steps.",
+    "actions": {
+      "turn": "{opponent}'s turn",
+      "tradeActionSpaceFur1": "Whenever the opponent gains a fur with the same value as the fur on the <b>trade action space</b>, he gains",
+      "tradeActionSpaceFur2": "instead."
+    },
+    "action": {
+      "move": "{steps} steps",
+      "or": "or",
+      "ifEmpty": "(if empty)",
+      "ifPossible": "(if possible)",
+      "claimLandscape": "Claim Landscape (if empty)",
+      "visitVillage": "Visit village (cosack's region)",
+      "outpost": "Build outpost or take new outpost",
+      "trophy": "Receive Trophy",
+      "yurt": "Use a yurt",
+      "tsar-wish": "Take a Tsar's Wish",
+      "claim-landscape-full-cost": "Claim Landscape Tile with full cost"
     }
   },
   "opponent": {

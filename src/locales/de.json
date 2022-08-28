@@ -29,8 +29,24 @@
   },
   "season": {
     "title": "Jahr {year}",
-    "botActions": {
-      "turn": "{opponent}s Zug"
+    "winter": "Der Gegner wählt das teuerste Liedplättchen (am weitesten rechts), das er mit Geschichtenpunkten zahlen kann.",
+    "actions": {
+      "turn": "{opponent}s Zug",
+      "tradeActionSpaceFur1": "Falls der Gegner 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem <b>Aktionsfeld Handel</b> erhält, erhält er stattdessen",
+      "tradeActionSpaceFur2": "."
+    },
+    "action": {
+      "move": "{steps} Schritte",
+      "or": "oder",
+      "ifEmpty": "(wenn leer)",
+      "ifPossible": "(wenn möglich)",
+      "claimLandscape": "Landschaftsplättchen beanspruchen (wenn leer)",
+      "visitVillage": "Dorf besuchen (Region des Kosaken)",
+      "outpost": "Außenposten bauen oder Außenposten erhalten",
+      "trophy": "Trophäe erhalten",
+      "yurt": "Jurte nutzen",
+      "tsar-wish": "Wunschkarte des Zaren nehmen",
+      "claim-landscape-full-cost": "Landschaftsplättchen beanspruchen mit vollen Kosten"
     }
   },
   "opponent": {
