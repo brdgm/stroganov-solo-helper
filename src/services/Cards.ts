@@ -2,11 +2,12 @@ import findMandatory from "brdgm-commons/src/util/map/findMandatory";
 import Card from "./Card";
 import Action from "./enum/Action";
 import HuntSelection from "./enum/HuntSelection";
+import Strategy from "./enum/Strategy";
 
 const cards = [
   {
     id: 1,
-    cardSelection: ['d'],
+    notStrategy: [Strategy.TROPHIES_LANDSCAPE_TILES],
     moveEastSteps: 1,
     huntSelection: HuntSelection.HIGHEST,
     huntCount: 1,
@@ -14,7 +15,7 @@ const cards = [
   },
   {
     id: 2,
-    cardSelection: ['f'],
+    notStrategy: [Strategy.LANDSCAPE_TILES_TSARS_WISHES],
     moveEastSteps: 3,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 2,
@@ -22,7 +23,7 @@ const cards = [
   },
   {
     id: 3,
-    cardSelection: ['a','c'],
+    notStrategy: [Strategy.OUTPOSTS_TROPHIES,Strategy.OUTPOSTS_TSARS_WISHES],
     moveEastSteps: 3,
     huntSelection: HuntSelection.HIGHEST,
     huntCount: 2,
@@ -30,7 +31,7 @@ const cards = [
   },
   {
     id: 4,
-    cardSelection: ['d','f'],
+    notStrategy: [Strategy.TROPHIES_LANDSCAPE_TILES,Strategy.LANDSCAPE_TILES_TSARS_WISHES],
     moveEastSteps: 3,
     huntSelection: HuntSelection.HIGHEST,
     huntCount: 1,
@@ -38,7 +39,7 @@ const cards = [
   },
   {
     id: 5,
-    cardSelection: ['b','c'],
+    notStrategy: [Strategy.OUTPOSTS_LANDSCAPE_TILES,Strategy.OUTPOSTS_TSARS_WISHES],
     moveEastSteps: 2,
     huntSelection: HuntSelection.HIGHEST,
     huntCount: 1,
@@ -46,7 +47,7 @@ const cards = [
   },
   {
     id: 6,
-    cardSelection: ['f'],
+    notStrategy: [Strategy.LANDSCAPE_TILES_TSARS_WISHES],
     moveEastSteps: 3,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 1,
@@ -54,7 +55,7 @@ const cards = [
   },
   {
     id: 7,
-    cardSelection: ['b','f'],
+    notStrategy: [Strategy.OUTPOSTS_LANDSCAPE_TILES,Strategy.LANDSCAPE_TILES_TSARS_WISHES],
     moveEastSteps: 2,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 2,
@@ -62,7 +63,7 @@ const cards = [
   },
   {
     id: 8,
-    cardSelection: ['d'],
+    notStrategy: [Strategy.TROPHIES_LANDSCAPE_TILES],
     moveEastSteps: 2,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 2,
@@ -70,7 +71,7 @@ const cards = [
   },
   {
     id: 9,
-    cardSelection: ['d'],
+    notStrategy: [Strategy.TROPHIES_LANDSCAPE_TILES],
     moveEastSteps: 5,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 2,
@@ -78,7 +79,7 @@ const cards = [
   },
   {
     id: 10,
-    cardSelection: ['e','f'],
+    notStrategy: [Strategy.TROPHIES_TSARS_WISHES,Strategy.LANDSCAPE_TILES_TSARS_WISHES],
     moveEastSteps: 4,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 1,
@@ -86,7 +87,7 @@ const cards = [
   },
   {
     id: 11,
-    cardSelection: ['c','e'],
+    notStrategy: [Strategy.OUTPOSTS_TSARS_WISHES,Strategy.TROPHIES_TSARS_WISHES],
     moveEastSteps: 2,
     huntSelection: HuntSelection.HIGHEST,
     huntCount: 2,
@@ -94,7 +95,7 @@ const cards = [
   },
   {
     id: 12,
-    cardSelection: ['e'],
+    notStrategy: [Strategy.TROPHIES_TSARS_WISHES],
     moveEastSteps: 1,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 1,
@@ -102,7 +103,7 @@ const cards = [
   },
   {
     id: 13,
-    cardSelection: ['c','e'],
+    notStrategy: [Strategy.OUTPOSTS_TSARS_WISHES,Strategy.TROPHIES_TSARS_WISHES],
     moveEastSteps: 4,
     huntSelection: HuntSelection.HIGHEST,
     huntCount: 1,
@@ -110,7 +111,7 @@ const cards = [
   },
   {
     id: 14,
-    cardSelection: ['a','b'],
+    notStrategy: [Strategy.OUTPOSTS_TROPHIES,Strategy.OUTPOSTS_LANDSCAPE_TILES],
     moveEastSteps: 2,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 1,
@@ -118,7 +119,7 @@ const cards = [
   },
   {
     id: 15,
-    cardSelection: ['a','b'],
+    notStrategy: [Strategy.OUTPOSTS_TROPHIES,Strategy.OUTPOSTS_LANDSCAPE_TILES],
     moveEastSteps: 4,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 1,
@@ -126,7 +127,7 @@ const cards = [
   },
   {
     id: 16,
-    cardSelection: ['b','c'],
+    notStrategy: [Strategy.OUTPOSTS_LANDSCAPE_TILES,Strategy.OUTPOSTS_TSARS_WISHES],
     moveEastSteps: 1,
     huntSelection: HuntSelection.HIGHEST,
     huntCount: 1,
@@ -134,7 +135,7 @@ const cards = [
   },
   {
     id: 17,
-    cardSelection: ['a','d'],
+    notStrategy: [Strategy.OUTPOSTS_TROPHIES,Strategy.TROPHIES_LANDSCAPE_TILES],
     moveEastSteps: 2,
     huntSelection: HuntSelection.LOWEST,
     huntCount: 1,
@@ -142,7 +143,7 @@ const cards = [
   },
   {
     id: 18,
-    cardSelection: ['a','e'],
+    notStrategy: [Strategy.OUTPOSTS_TROPHIES,Strategy.TROPHIES_TSARS_WISHES],
     moveEastSteps: 3,
     huntSelection: HuntSelection.HIGHEST,
     huntCount: 1,

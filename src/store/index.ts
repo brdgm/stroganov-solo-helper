@@ -21,10 +21,15 @@ export interface PlayerSetup {
   botCount: number
   opponent: Opponent[]
   strategy: Strategy[]
+  actualStrategy: Strategy[]
   playerColors: PlayerColor[]
 }
 export interface Round {
   round: number
+}
+export interface CardDeckPersistence {
+  deck: number[]
+  discard: number[]
 }
 
 declare module '@vue/runtime-core' {
@@ -46,6 +51,7 @@ export const store = createStore<State>({
         botCount: 1,
         opponent: [Opponent.IVAN],
         strategy: [Strategy.NONE],
+        actualStrategy: [Strategy.NONE],
         playerColors: [PlayerColor.YELLOW,PlayerColor.BLUE,PlayerColor.RED,PlayerColor.GREEN]
       }
     },

@@ -68,6 +68,7 @@ import Opponent from '@/services/enum/Opponent'
 import Strategy from '@/services/enum/Strategy'
 import PlayerColor from '@/services/enum/PlayerColor'
 import PlayerColorPicker from './PlayerColorPicker.vue'
+import randomEnum from 'brdgm-commons/src/util/random/randomEnum'
 
 export default defineComponent({
   name: 'Players',
@@ -124,6 +125,7 @@ export default defineComponent({
         botCount: this.botCount,
         opponent: this.opponent,
         strategy: this.strategy,
+        actualStrategy: this.mapActualPlayerStrategy(this.strategy),
         playerColors: this.playerColors
       })
     },
@@ -139,6 +141,22 @@ export default defineComponent({
         }
       }
       this.playerColors = newPlayerColors
+    },
+    mapActualPlayerStrategy(selectedStrategy : Strategy[]) : Strategy[] {
+      return selectedStrategy.map(this.mapActualPlayerStrategyItem)
+    },
+    mapActualPlayerStrategyItem(selectedStrategy : Strategy) : Strategy {
+      if (selectedStrategy == Strategy.HIDDEN) {
+        return this.pickRandomStrategy()
+      }
+      return selectedStrategy
+    },
+    pickRandomStrategy() : Strategy {
+      const randomStrategy = randomEnum(Strategy)
+      if (randomStrategy == Strategy.NONE || randomStrategy == Strategy.HIDDEN) {
+        return this.pickRandomStrategy()
+      }
+      return randomStrategy
     }
   }
 })
