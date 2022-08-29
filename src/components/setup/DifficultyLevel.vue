@@ -13,11 +13,12 @@
       <label for="difficultyLevel" class="form-label">{{t('setup.difficultyLevel.hard')}}</label>
     </div>
   </div>
-  <div class="row mt-3" v-if="difficultyLevel > 1">
+  <div class="row mt-3">
     <div class="col-11 text-muted small">
       <ul>
-        <li v-html="t('setup.difficultyLevel.mediumInfo')"></li>
+        <li v-if="difficultyLevel > 1" v-html="t('setup.difficultyLevel.mediumInfo')"></li>
         <li v-if="difficultyLevel > 2" v-html="t('setup.difficultyLevel.hardInfo')"></li>
+        <li><i v-html="t('setup.difficultyLevel.playerBoardB')"></i></li>
       </ul>
     </div>
   </div>

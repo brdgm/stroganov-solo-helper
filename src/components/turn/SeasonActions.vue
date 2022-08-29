@@ -71,7 +71,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .playerColorIcon {
     margin-top: 0.25rem;
   }

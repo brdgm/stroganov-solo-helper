@@ -24,12 +24,14 @@
       "easy": "Easy",
       "hard": "Hard",
       "mediumInfo": "Whenever Ivan doesn't have the right fur to fully perform his additional action, he gains 1 coin instead.",
-      "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead."
+      "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead.",
+      "playerBoardB": "You can use one of the asymmetrical \"b\" sides of the player boards to make the game easier for you."
     }
   },
   "season": {
     "title": "Year {year}",
     "winter": "The opponent will take the most expensive (rightmost) song tile that he can pay for with story track steps.",
+    "endOfGame": "Collect the end game Victory Points (VP).",
     "actions": {
       "turn": "{opponent}'s turn",
       "tradeActionSpaceFur1": "Whenever the opponent gains a fur with the same value as the fur on the <b>trade action space</b>, he gains",

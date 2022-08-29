@@ -24,12 +24,14 @@
       "easy": "Leicht",
       "hard": "Schwer",
       "mediumInfo": "Falls Iwan nicht genügend Felle besitzt, um seine zusätzliche Aktion komplett auszuführen, erhält er stattdessen 1 Münze.",
-      "hardInfo": "Falls Iwan 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem Aktionsfeld Handel erhält, erhält er stattdessen 1 Münze."
+      "hardInfo": "Falls Iwan 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem Aktionsfeld Handel erhält, erhält er stattdessen 1 Münze.",
+      "playerBoardB": "Du kannst eine der individuellen \"b\"-Seiten der Spieler-Tableaus verwenden, um das Spiel für dich einfacher zu machen."
     }
   },
   "season": {
     "title": "Jahr {year}",
     "winter": "Der Gegner wählt das teuerste Liedplättchen (am weitesten rechts), das er mit Geschichtenpunkten zahlen kann.",
+    "endOfGame": "Ermittle die Siegpunkte (SP) zum Spielende.",
     "actions": {
       "turn": "{opponent}s Zug",
       "tradeActionSpaceFur1": "Falls der Gegner 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem <b>Aktionsfeld Handel</b> erhält, erhält er stattdessen",
