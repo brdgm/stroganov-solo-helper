@@ -33,7 +33,9 @@
     "winter": "Der Gegner wählt das teuerste Liedplättchen (am weitesten rechts), das er mit Geschichtenpunkten zahlen kann.",
     "endOfGame": "Ermittle die Siegpunkte (SP) zum Spielende.",
     "actions": {
-      "turn": "{opponent}s Zug",
+      "playerTurn": "Dein Zug",
+      "playerTurnInfo": "Führe deinen Zug aus.",
+      "botTurn": "{opponent}s Zug",
       "tradeActionSpaceFur1": "Falls der Gegner 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem <b>Aktionsfeld Handel</b> erhält, erhält er stattdessen",
       "tradeActionSpaceFur2": "."
     },

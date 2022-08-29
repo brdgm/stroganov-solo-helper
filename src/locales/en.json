@@ -33,7 +33,9 @@
     "winter": "The opponent will take the most expensive (rightmost) song tile that he can pay for with story track steps.",
     "endOfGame": "Collect the end game Victory Points (VP).",
     "actions": {
-      "turn": "{opponent}'s turn",
+      "playerTurn": "Your turn",
+      "playerTurnInfo": "Perform your turn.",
+      "botTurn": "{opponent}'s turn",
       "tradeActionSpaceFur1": "Whenever the opponent gains a fur with the same value as the fur on the <b>trade action space</b>, he gains",
       "tradeActionSpaceFur2": "instead."
     },
