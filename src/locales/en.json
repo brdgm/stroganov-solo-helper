@@ -31,7 +31,9 @@
   "season": {
     "title": "Year {year}",
     "winter": "The opponent will take the most expensive (rightmost) song tile that he can pay for with story track steps.",
-    "endOfGame": "Collect the end game Victory Points (VP).",
+    "endOfGame": "End of Game",
+    "endOfGameInfo": "Collect the end game Victory Points (VP).",
+    "endOfGameActualStrategies": "Actual Strategies:",
     "actions": {
       "playerTurn": "Your turn",
       "playerTurnInfo": "Perform your turn.",

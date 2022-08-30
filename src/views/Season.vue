@@ -6,14 +6,7 @@
   </h1>
 
   <SeasonActions v-if="season != 4" :navigationState="state"/>
-  <template v-else>
-    <div class="row mt-3 mb-3">
-      <div class="col" v-html="t('season.winter')"></div>
-    </div>
-    <div class="row mt-3 mb-3" v-if="year==4">
-      <div class="col"><b v-html="t('season.endOfGame')"></b></div>
-    </div>
-  </template> 
+  <Winter v-else :navigationState="state"/>
 
   <router-link v-if="nextButtonRouteTo" :to="nextButtonRouteTo" class="btn btn-primary btn-lg mt-3">
     {{t('action.next')}}
@@ -32,13 +25,15 @@ import NavigationState from '@/util/NavigationState'
 import Icon from '@/components/structure/Icon.vue'
 import Season from '@/services/enum/Season'
 import SeasonActions from '@/components/turn/SeasonActions.vue'
+import Winter from '@/components/turn/Winter.vue'
 
 export default defineComponent({
   name: 'RoundTurn',
   components: {
     FooterButtons,
     Icon,
-    SeasonActions
+    SeasonActions,
+    Winter
   },
   setup() {
     const { t } = useI18n()

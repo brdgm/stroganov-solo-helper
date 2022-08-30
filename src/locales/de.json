@@ -31,7 +31,9 @@
   "season": {
     "title": "Jahr {year}",
     "winter": "Der Gegner wählt das teuerste Liedplättchen (am weitesten rechts), das er mit Geschichtenpunkten zahlen kann.",
-    "endOfGame": "Ermittle die Siegpunkte (SP) zum Spielende.",
+    "endOfGame": "Spielende",
+    "endOfGameInfo": "Ermittle die Siegpunkte (SP) zum Spielende.",
+    "endOfGameActualStrategies": "Verfolgte Strategien:",
     "actions": {
       "playerTurn": "Dein Zug",
       "playerTurnInfo": "Führe deinen Zug aus.",
