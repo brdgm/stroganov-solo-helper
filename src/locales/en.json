@@ -23,15 +23,21 @@
       "title": "Difficulty Level",
       "easy": "Easy",
       "hard": "Hard",
-      "mediumInfo": "Whenever Ivan doesn’t have the right fur to fully perform his additional action, he gains 1 coin instead.",
-      "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead."
+      "mediumInfo": "Whenever Ivan doesn't have the right fur to fully perform his additional action, he gains 1 coin instead.",
+      "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead.",
+      "playerBoardB": "You can use one of the asymmetrical \"b\" sides of the player boards to make the game easier for you."
     }
   },
   "season": {
     "title": "Year {year}",
     "winter": "The opponent will take the most expensive (rightmost) song tile that he can pay for with story track steps.",
+    "endOfGame": "End of Game",
+    "endOfGameInfo": "Collect the end game Victory Points (VP).",
+    "endOfGameActualStrategies": "Actual Strategies:",
     "actions": {
-      "turn": "{opponent}'s turn",
+      "playerTurn": "Your turn",
+      "playerTurnInfo": "Perform your turn.",
+      "botTurn": "{opponent}'s turn",
       "tradeActionSpaceFur1": "Whenever the opponent gains a fur with the same value as the fur on the <b>trade action space</b>, he gains",
       "tradeActionSpaceFur2": "instead."
     },
@@ -64,7 +70,7 @@
     "outposts-landscape-tiles": "Outposts & Landscape Tiles",
     "outposts-tsars-wishes": "Outposts & Tsar's Wishes",
     "trophies-landscape-tiles": "Trophies & Landscape Tiles",
-    "trophies-tsars-wishes": "Trophies & Tsar’s Wishes",
+    "trophies-tsars-wishes": "Trophies & Tsar's Wishes",
     "landscape-tiles-tsars-wishes": "Landscape Tiles & Tsar's Wishes"
   },
   "seasonName": {

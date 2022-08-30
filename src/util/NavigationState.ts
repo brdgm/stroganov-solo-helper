@@ -14,7 +14,7 @@ export default class NavigationState {
   readonly difficultyLevel : DifficultyLevel
   readonly botCount : number
   readonly botOpponent : Opponent[]
-  readonly botPlayerColors : PlayerColor[]
+  readonly playerColors : PlayerColor[]
   readonly year : number
   readonly season : number
   readonly cardDeck? : CardDeck[]
@@ -24,7 +24,7 @@ export default class NavigationState {
     this.difficultyLevel = setup.difficultyLevel
     this.botCount = setup.playerSetup.botCount
     this.botOpponent = setup.playerSetup.opponent
-    this.botPlayerColors = setup.playerSetup.playerColors.slice(1)
+    this.playerColors = setup.playerSetup.playerColors
 
     this.year = parseInt(route.params['year'] as string)
     this.season = parseInt(route.params['season'] as string)
