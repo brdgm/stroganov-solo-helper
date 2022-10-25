@@ -28,7 +28,7 @@ import SeasonActions from '@/components/turn/SeasonActions.vue'
 import Winter from '@/components/turn/Winter.vue'
 
 export default defineComponent({
-  name: 'RoundTurn',
+  name: 'Season',
   components: {
     FooterButtons,
     Icon,

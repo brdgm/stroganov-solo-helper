@@ -4,7 +4,7 @@
   <Players/>
   <DifficultyLevel/>
 
-  <button to="/year/1/season/1" class="btn btn-primary btn-lg mt-4" @click="startGame">
+  <button class="btn btn-primary btn-lg mt-4" @click="startGame">
     {{t('action.startGame')}}
   </button>
 
