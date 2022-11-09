@@ -34,7 +34,7 @@
   <div class="row mt-3" v-if="difficultyLevel > 2">
     <div class="col small">
       <span v-html="t('season.actions.tradeActionSpaceFur1')"></span>
-      <Icon name="coin" class="coinNote"/>
+      <AppIcon name="coin" class="coinNote"/>
       <span v-html="t('season.actions.tradeActionSpaceFur2')"></span>
     </div>
   </div>
@@ -49,14 +49,14 @@ import PlayerColorDisplay from '../structure/PlayerColorDisplay.vue'
 import Opponent from '@/services/enum/Opponent'
 import SeasonAction from './SeasonAction.vue'
 import CardDeck from '@/services/CardDeck'
-import Icon from '../structure/Icon.vue'
+import AppIcon from '../structure/AppIcon.vue'
 
 export default defineComponent({
   name: "SeasonActions",
   components: {
     PlayerColorDisplay,
     SeasonAction,
-    Icon
+    AppIcon
   },
   setup() {
     const { t } = useI18n();

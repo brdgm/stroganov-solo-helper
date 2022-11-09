@@ -28,39 +28,41 @@ import PlayerColor from '@/services/enum/PlayerColor';
 import PlayerColorDisplay from '../structure/PlayerColorDisplay.vue';
 
 export default defineComponent({
-    name: "Winter",
-    setup() {
-        const { t } = useI18n();
-        useStore();
-        return { t };
+  name: 'WinterSeason',
+  components: {
+    PlayerColorDisplay
+  },
+  setup() {
+    const { t } = useI18n()
+    useStore()
+    return { t }
+  },
+  props: {
+    navigationState: {
+      type: NavigationState,
+      required: true
+    }
+  },
+  computed: {
+    year(): number {
+      return this.navigationState.year
     },
-    props: {
-        navigationState: {
-            type: NavigationState,
-            required: true
-        }
+    botCount(): number {
+      return this.navigationState.botCount
     },
-    computed: {
-        year(): number {
-            return this.navigationState.year;
-        },
-        botCount(): number {
-            return this.navigationState.botCount;
-        },
-        playerColors(): PlayerColor[] {
-            return this.navigationState.playerColors;
-        }
+    playerColors(): PlayerColor[] {
+      return this.navigationState.playerColors
+    }
+  },
+  methods: {
+    getOpponent(bot: number): Opponent | undefined {
+      return this.$store.state.setup.playerSetup.opponent[bot]
     },
-    methods: {
-        getOpponent(bot: number): Opponent | undefined {
-            return this.$store.state.setup.playerSetup.opponent[bot];
-        },
-        getActualStrategy(bot: number): Strategy | undefined {
-            if (this.$store.state.setup.actualStrategy) {
-                return this.$store.state.setup.actualStrategy[bot];
-            }
-        }
-    },
-    components: { PlayerColorDisplay }
+    getActualStrategy(bot: number): Strategy | undefined {
+      if (this.$store.state.setup.actualStrategy) {
+        return this.$store.state.setup.actualStrategy[bot]
+      }
+    }
+  }
 })
 </script>
