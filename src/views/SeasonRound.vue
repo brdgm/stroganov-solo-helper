@@ -1,12 +1,12 @@
 <template>
   <h1>
     {{t('season.title',{year:year})}}:
-    <Icon type="season" :name="seasonName" class="seasonIcon"/>
+    <AppIcon type="season" :name="seasonName" class="seasonIcon"/>
     {{t(`seasonName.${seasonName}`)}}
   </h1>
 
   <SeasonActions v-if="season != 4" :navigationState="state"/>
-  <Winter v-else :navigationState="state"/>
+  <WinterSeason v-else :navigationState="state"/>
 
   <router-link v-if="nextButtonRouteTo" :to="nextButtonRouteTo" class="btn btn-primary btn-lg mt-3">
     {{t('action.next')}}
@@ -22,18 +22,18 @@ import { useRoute } from 'vue-router'
 import { useStore } from '@/store'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import NavigationState from '@/util/NavigationState'
-import Icon from '@/components/structure/Icon.vue'
+import AppIcon from '@/components/structure/AppIcon.vue'
 import Season from '@/services/enum/Season'
 import SeasonActions from '@/components/turn/SeasonActions.vue'
-import Winter from '@/components/turn/Winter.vue'
+import WinterSeason from '@/components/turn/WinterSeason.vue'
 
 export default defineComponent({
-  name: 'RoundTurn',
+  name: 'SeasonRound',
   components: {
     FooterButtons,
-    Icon,
+    AppIcon,
     SeasonActions,
-    Winter
+    WinterSeason
   },
   setup() {
     const { t } = useI18n()

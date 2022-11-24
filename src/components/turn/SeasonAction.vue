@@ -1,27 +1,27 @@
 <template>
   <ol>
     <li>
-      <Icon type="move" :name="`move-${moveEastSteps}`"/>
+      <AppIcon type="move" :name="`move-${moveEastSteps}`"/>
       <span v-html="t('season.action.move',{steps:moveEastSteps})" class="desc"></span>
     </li>
     <li>
-      <icon name="hunting"/>:      
+      <AppIcon name="hunting"/>:      
       <table class="hunting">
         <tr>
-          <td><icon name="arrow" class="arrow" v-if="fur1Active"/></td>
-          <td><icon name="fur-hunt" class="fur" :class="{inactive:!fur1Active}"/></td>
+          <td><AppIcon name="arrow" class="arrow" v-if="fur1Active"/></td>
+          <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur1Active}"/></td>
         </tr>
         <tr>
-          <td><icon name="arrow" class="arrow" v-if="fur2Active"/></td>
-          <td><icon name="fur-hunt" class="fur" :class="{inactive:!fur2Active}"/></td>
+          <td><AppIcon name="arrow" class="arrow" v-if="fur2Active"/></td>
+          <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur2Active}"/></td>
         </tr>
         <tr>
-          <td><icon name="arrow" class="arrow" v-if="fur3Active"/></td>
-          <td><icon name="fur-hunt" class="fur" :class="{inactive:!fur3Active}"/></td>
+          <td><AppIcon name="arrow" class="arrow" v-if="fur3Active"/></td>
+          <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur3Active}"/></td>
         </tr>
       </table>
       <span v-html="t('season.action.or')" class="or"></span>
-      <icon v-for="item in huntCount" :key="item" name="coin" class="coin"/>
+      <AppIcon v-for="item in huntCount" :key="item" name="coin" class="coin"/>
       <span v-html="t('season.action.ifEmpty')" class="desc"></span>
     </li>
     <li>
@@ -32,34 +32,34 @@
     
     <li>
       <template v-if="extendedAction=='outpost'">
-        <icon name="fur-location" class="fur-location"/>
-        <icon name="arrow-grey" class="arrow-grey"/>
-        <icon name="outpost" class="outpost"/>
+        <AppIcon name="fur-location" class="fur-location"/>
+        <AppIcon name="arrow-grey" class="arrow-grey"/>
+        <AppIcon name="outpost" class="outpost"/>
         <span v-html="t('season.action.outpost')" class="desc"></span>
       </template>
       <template v-if="extendedAction=='trophy'">
-        <icon name="trophy" class="trophy"/>
+        <AppIcon name="trophy" class="trophy"/>
         <span v-html="t('season.action.trophy')" class="desc"></span>
       </template>
       <template v-if="extendedAction=='yurt'">
-        <icon name="fur-location" class="fur-location"/>
-        <icon name="arrow-grey" class="arrow-grey"/>
-        <icon name="yurt" class="yurt"/>
+        <AppIcon name="fur-location" class="fur-location"/>
+        <AppIcon name="arrow-grey" class="arrow-grey"/>
+        <AppIcon name="yurt" class="yurt"/>
         <span v-html="t('season.action.yurt')" class="desc"></span>
       </template>
       <template v-if="extendedAction=='tsar-wish'">
-        <icon name="fur-location" class="fur-location"/>
-        <icon name="arrow-grey" class="arrow-grey"/>
-        <icon name="tsar-wish-card" class="tsar-wish-card"/>
+        <AppIcon name="fur-location" class="fur-location"/>
+        <AppIcon name="arrow-grey" class="arrow-grey"/>
+        <AppIcon name="tsar-wish-card" class="tsar-wish-card"/>
         <span v-html="t('season.action.tsar-wish')" class="desc"></span>
       </template>
       <template v-if="extendedAction=='claim-landscape-full-cost'">
-        <icon name="landscape-buy-full-cost" class="landscape-buy-full-cost"/>
+        <AppIcon name="landscape-buy-full-cost" class="landscape-buy-full-cost"/>
         <span v-html="t('season.action.claim-landscape-full-cost')" class="desc"></span>
       </template>
       <template v-if="difficultyLevel > 1">
         <span v-html="t('season.action.or')" class="or"></span>
-        <icon name="coin" class="coin"/>
+        <AppIcon name="coin" class="coin"/>
       </template>
       <span v-else v-html="t('season.action.ifPossible')" class="desc"></span>
     </li>
@@ -73,12 +73,12 @@ import { useI18n } from 'vue-i18n'
 import CardDeck from '@/services/CardDeck'
 import HuntSelection from '@/services/enum/HuntSelection';
 import Action from '@/services/enum/Action';
-import Icon from '../structure/Icon.vue';
+import AppIcon from '../structure/AppIcon.vue';
 
 export default defineComponent({
   name: "SeasonAction",
   components: {
-    Icon
+    AppIcon
   },
   setup() {
     const { t } = useI18n();
