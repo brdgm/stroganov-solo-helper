@@ -35,7 +35,7 @@ export default defineComponent({
   },
   methods: {
     startGame() {
-      this.$store.commit('endGame')  // reset game state
+      this.$store.commit('resetGame')
       this.$router.push('/year/1/season/1')
     }
   }
