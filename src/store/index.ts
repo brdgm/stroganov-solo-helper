@@ -94,7 +94,7 @@ export const store = createStore<State>({
       year.seasons = year.seasons.filter(item => item.season != season.season)
       year.seasons.push(season)
     },
-    endGame(state : State) {
+    resetGame(state : State) {
       state.setup.actualStrategy = undefined
       state.years = []
     },
