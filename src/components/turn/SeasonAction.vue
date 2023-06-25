@@ -76,7 +76,7 @@ import Action from '@/services/enum/Action';
 import AppIcon from '../structure/AppIcon.vue';
 
 export default defineComponent({
-  name: "SeasonAction",
+  name: 'SeasonAction',
   components: {
     AppIcon
   },

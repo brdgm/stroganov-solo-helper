@@ -52,7 +52,7 @@ import CardDeck from '@/services/CardDeck'
 import AppIcon from '../structure/AppIcon.vue'
 
 export default defineComponent({
-  name: "SeasonActions",
+  name: 'SeasonActions',
   components: {
     PlayerColorDisplay,
     SeasonAction,

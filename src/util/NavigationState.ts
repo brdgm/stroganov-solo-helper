@@ -1,13 +1,13 @@
-import DifficultyLevel from "@/services/enum/DifficultyLevel"
-import { State } from "@/store"
-import { RouteLocation } from "vue-router"
-import { Store } from "vuex"
-import CardDeck from "@/services/CardDeck"
-import getActualStrategy from "./getActualStrategy"
-import Strategy from "@/services/enum/Strategy"
-import Season from "@/services/enum/Season"
-import PlayerColor from "@/services/enum/PlayerColor"
-import Opponent from "@/services/enum/Opponent"
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import { State } from '@/store'
+import { RouteLocation } from 'vue-router'
+import { Store } from 'vuex'
+import CardDeck from '@/services/CardDeck'
+import getActualStrategy from './getActualStrategy'
+import Strategy from '@/services/enum/Strategy'
+import Season from '@/services/enum/Season'
+import PlayerColor from '@/services/enum/PlayerColor'
+import Opponent from '@/services/enum/Opponent'
 
 export default class NavigationState {
 
