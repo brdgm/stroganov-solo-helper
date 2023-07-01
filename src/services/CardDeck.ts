@@ -1,8 +1,8 @@
-import { CardDeckPersistence } from "@/store"
-import * as _ from "lodash"
-import Card from "./Card"
-import Cards from "./Cards"
-import Strategy from "./enum/Strategy"
+import { CardDeckPersistence } from '@/store'
+import * as _ from 'lodash'
+import Card from './Card'
+import Cards from './Cards'
+import Strategy from './enum/Strategy'
 import rollDice from 'brdgm-commons/src/util/random/rollDice'
 
 /**
