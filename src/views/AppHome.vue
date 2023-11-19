@@ -2,7 +2,7 @@
 
   <div class="float-end m-2 w-25">
     <a href="https://boardgamegeek.com/boardgame/323156/stroganov" target="_blank" rel="noopener">
-      <img src="../assets/game-stroganov.jpg" class="rounded shadow w-100"/>
+      <img src="../assets/game-stroganov.jpg" class="rounded shadow w-100" alt=""/>
     </a>
   </div>
 
@@ -23,7 +23,7 @@
     This is not an official Game Brewer product and has no affiliation with <a href="https://gamebrewer.com/" target="_blank" rel="noopener">Game Brewer</a>.
     All art in this app is from <a href="https://gamebrewer.com/games/stroganov/?v=3a52f3c22ed6" target="_blank" rel="noopener">Stroganov</a>.
     See <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{t('footer.credits')}}</a>.
-    <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png"/></a>
+    <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png" alt="Support me on Ko-fi"/></a>
   </p>
 
 </template>
