@@ -1,5 +1,5 @@
 import { CardDeckPersistence } from '@/store'
-import * as _ from 'lodash'
+import { shuffle } from 'lodash'
 import Card from './Card'
 import Cards from './Cards'
 import Strategy from './enum/Strategy'
@@ -76,7 +76,7 @@ export default class CardDeck {
       // remove all cards not matching the selected strategy
       deck = deck.filter(item => !item.notStrategy.includes(strategy))
     }
-    deck = _.shuffle(deck)
+    deck = shuffle(deck)
     return new CardDeck(deck, [])
   }
 
