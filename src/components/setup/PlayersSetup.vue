@@ -61,9 +61,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import Opponent from '@/services/enum/Opponent'
 import Strategy from '@/services/enum/Strategy'
 import PlayerColor from '@/services/enum/PlayerColor'
@@ -76,15 +76,17 @@ export default defineComponent({
 },
   setup() {
     const { t } = useI18n()
-    useStore()
-    return { t }
+    const state = useStateStore()
+
+    const botCount = ref(state.setup.playerSetup.botCount)
+    const opponent = ref(state.setup.playerSetup.opponent)
+    const strategy = ref(state.setup.playerSetup.strategy)
+    const playerColors = ref(state.setup.playerSetup.playerColors)
+
+    return { t, state, botCount, opponent, strategy, playerColors }
   },
   data() {
     return {
-      botCount: this.$store.state.setup.playerSetup.botCount,
-      opponent: this.$store.state.setup.playerSetup.opponent,
-      strategy: this.$store.state.setup.playerSetup.strategy,
-      playerColors: this.$store.state.setup.playerSetup.playerColors,
       opponents: Object.values(Opponent),
       strategies: Object.values(Strategy)
     }
@@ -120,12 +122,12 @@ export default defineComponent({
           this.strategy[bot-1] = Strategy.NONE
         }
       }
-      this.$store.commit('setupPlayer', {
+      this.state.setup.playerSetup = {
         botCount: this.botCount,
         opponent: this.opponent,
         strategy: this.strategy,
         playerColors: this.playerColors
-      })
+      }
     },
     playerColorChanged(index : number, color : PlayerColor) {
       const newPlayerColors = [...this.playerColors]

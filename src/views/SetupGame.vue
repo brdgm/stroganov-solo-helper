@@ -18,7 +18,7 @@ import PlayersSetup from '@/components/setup/PlayersSetup.vue'
 import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'SetupGame',
@@ -29,13 +29,13 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
+    const state = useStateStore()
     useRoute()
-    return { t }
+    return { t, state }
   },
   methods: {
     startGame() {
-      this.$store.commit('resetGame')
+      this.state.resetGame()
       this.$router.push('/year/1/season/1')
     }
   }
