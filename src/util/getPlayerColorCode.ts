@@ -1,4 +1,4 @@
-import PlayerColor from '@/services/enum/PlayerColor';
+import PlayerColor from '@/services/enum/PlayerColor'
 
 /**
  * Get color code for player color.
@@ -14,7 +14,7 @@ export default function(playerColor: PlayerColor) : string {
     case PlayerColor.RED:
       return '#9b1c17'
     case PlayerColor.GREEN:
-      return '#2b9c4e';
+      return '#2b9c4e'
     default:
       throw new Error(`Invalid player color: ${playerColor}.`)
   }

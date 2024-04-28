@@ -1,4 +1,4 @@
-import Strategy from '@/services/enum/Strategy';
+import Strategy from '@/services/enum/Strategy'
 import randomEnum from 'brdgm-commons/src/util/random/randomEnum'
 
 /**
