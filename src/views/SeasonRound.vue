@@ -5,8 +5,8 @@
     {{t(`seasonName.${seasonName}`)}}
   </h1>
 
-  <SeasonActions v-if="season != 4" :navigationState="state"/>
-  <WinterSeason v-else :navigationState="state"/>
+  <SeasonActions v-if="season != 4" :navigationState="navigationState"/>
+  <WinterSeason v-else :navigationState="navigationState"/>
 
   <router-link v-if="nextButtonRouteTo" :to="nextButtonRouteTo" class="btn btn-primary btn-lg mt-3">
     {{t('action.next')}}
@@ -19,7 +19,6 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import { useStore } from '@/store'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
@@ -37,14 +36,12 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    const store = useStore()
     const route = useRoute()
 
-    const state = new NavigationState(route, store)
-    const year = state.year
-    const season = state.season
+    const navigationState = new NavigationState(route)
+    const { year, season } = navigationState
 
-    return { t, year, season, state }
+    return { t, year, season, navigationState }
   },
   computed: {
     backButtonRouteTo() : string {

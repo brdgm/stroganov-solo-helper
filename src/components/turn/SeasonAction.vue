@@ -71,9 +71,9 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import CardDeck from '@/services/CardDeck'
-import HuntSelection from '@/services/enum/HuntSelection';
-import Action from '@/services/enum/Action';
-import AppIcon from '../structure/AppIcon.vue';
+import HuntSelection from '@/services/enum/HuntSelection'
+import Action from '@/services/enum/Action'
+import AppIcon from '../structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'SeasonAction',

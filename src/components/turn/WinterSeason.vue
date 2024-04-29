@@ -21,11 +21,11 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
-import { useStore } from 'vuex';
-import Strategy from '@/services/enum/Strategy';
-import Opponent from '@/services/enum/Opponent';
-import PlayerColor from '@/services/enum/PlayerColor';
-import PlayerColorDisplay from '../structure/PlayerColorDisplay.vue';
+import Strategy from '@/services/enum/Strategy'
+import Opponent from '@/services/enum/Opponent'
+import PlayerColor from '@/services/enum/PlayerColor'
+import PlayerColorDisplay from '../structure/PlayerColorDisplay.vue'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'WinterSeason',
@@ -34,8 +34,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     navigationState: {
@@ -56,11 +56,11 @@ export default defineComponent({
   },
   methods: {
     getOpponent(bot: number): Opponent | undefined {
-      return this.$store.state.setup.playerSetup.opponent[bot]
+      return this.state.setup.playerSetup.opponent[bot]
     },
     getActualStrategy(bot: number): Strategy | undefined {
-      if (this.$store.state.setup.actualStrategy) {
-        return this.$store.state.setup.actualStrategy[bot]
+      if (this.state.setup.actualStrategy) {
+        return this.state.setup.actualStrategy[bot]
       }
     }
   }
