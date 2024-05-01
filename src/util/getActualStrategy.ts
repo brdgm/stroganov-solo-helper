@@ -1,5 +1,5 @@
 import Strategy from '@/services/enum/Strategy'
-import randomEnum from 'brdgm-commons/src/util/random/randomEnum'
+import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
 
 /**
  * Map selected strategies to actual strategies.
