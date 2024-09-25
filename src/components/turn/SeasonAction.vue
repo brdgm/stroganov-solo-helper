@@ -7,18 +7,20 @@
     <li>
       <AppIcon name="hunting"/>:      
       <table class="hunting">
-        <tr>
-          <td><AppIcon name="arrow" class="arrow" v-if="fur1Active"/></td>
-          <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur1Active}"/></td>
-        </tr>
-        <tr>
-          <td><AppIcon name="arrow" class="arrow" v-if="fur2Active"/></td>
-          <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur2Active}"/></td>
-        </tr>
-        <tr>
-          <td><AppIcon name="arrow" class="arrow" v-if="fur3Active"/></td>
-          <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur3Active}"/></td>
-        </tr>
+        <tbody>
+          <tr>
+            <td><AppIcon name="arrow" class="arrow" v-if="fur1Active"/></td>
+            <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur1Active}"/></td>
+          </tr>
+          <tr>
+            <td><AppIcon name="arrow" class="arrow" v-if="fur2Active"/></td>
+            <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur2Active}"/></td>
+          </tr>
+          <tr>
+            <td><AppIcon name="arrow" class="arrow" v-if="fur3Active"/></td>
+            <td><AppIcon name="fur-hunt" class="fur" :class="{inactive:!fur3Active}"/></td>
+          </tr>
+        </tbody>
       </table>
       <span v-html="t('season.action.or')" class="or"></span>
       <AppIcon v-for="item in huntCount" :key="item" name="coin" class="coin"/>
@@ -71,9 +73,9 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import CardDeck from '@/services/CardDeck'
-import HuntSelection from '@/services/enum/HuntSelection';
-import Action from '@/services/enum/Action';
-import AppIcon from '../structure/AppIcon.vue';
+import HuntSelection from '@/services/enum/HuntSelection'
+import Action from '@/services/enum/Action'
+import AppIcon from '../structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'SeasonAction',
@@ -81,8 +83,8 @@ export default defineComponent({
     AppIcon
   },
   setup() {
-    const { t } = useI18n();
-    return { t };
+    const { t } = useI18n()
+    return { t }
   },
   props: {
     cardDeck: {

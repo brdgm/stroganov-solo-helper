@@ -1,7 +1,6 @@
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
-import { State } from '@/store'
+import { useStateStore } from '@/store/state'
 import { RouteLocation } from 'vue-router'
-import { Store } from 'vuex'
 import CardDeck from '@/services/CardDeck'
 import getActualStrategy from './getActualStrategy'
 import Strategy from '@/services/enum/Strategy'
@@ -11,6 +10,7 @@ import Opponent from '@/services/enum/Opponent'
 
 export default class NavigationState {
 
+  readonly state
   readonly difficultyLevel : DifficultyLevel
   readonly botCount : number
   readonly botOpponent : Opponent[]
@@ -19,8 +19,9 @@ export default class NavigationState {
   readonly season : number
   readonly cardDeck? : CardDeck[]
 
-  constructor(route : RouteLocation, store : Store<State>) {    
-    const setup = store.state.setup
+  constructor(route : RouteLocation) {
+    this.state = useStateStore()
+    const setup = this.state.setup
     this.difficultyLevel = setup.difficultyLevel
     this.botCount = setup.playerSetup.botCount
     this.botOpponent = setup.playerSetup.opponent
@@ -28,15 +29,15 @@ export default class NavigationState {
 
     this.year = parseInt(route.params['year'] as string)
     this.season = parseInt(route.params['season'] as string)
-    this.cardDeck = NavigationState.getCardDecks(this.year, this.season, this.botCount, store)
+    this.cardDeck = this.getCardDecks(this.year, this.season, this.botCount)
   }
 
-  private static getCardDecks(year : number, season : number, botCount : number, store : Store<State>) : CardDeck[] | undefined {
+  private getCardDecks(year : number, season : number, botCount : number) : CardDeck[] | undefined {
     if (season == Season.WINTER) {
       return undefined
     }
 
-    let yearData = store.state.years[year - 1]
+    let yearData = this.state.years[year - 1]
     if (!yearData) {
       yearData = {
         year: year,
@@ -53,29 +54,29 @@ export default class NavigationState {
     }
 
     if (seasonData.cardDeck.length < botCount) {
-      let cardDeck = this.getPreviousCardDecks(year, season, store)
+      let cardDeck = this.getPreviousCardDecks(year, season)
       if (!cardDeck) {
-        cardDeck = this.createNewCardDecks(botCount, store)
+        cardDeck = this.createNewCardDecks(botCount)
       }
       // draw next card for each card deck
       cardDeck.forEach(item => item.draw())
       seasonData.cardDeck = cardDeck.map(item => item.toPersistence())
-      store.commit('season', seasonData)
+      this.state.season(seasonData)
     }
 
     return seasonData.cardDeck.map(item => CardDeck.fromPersistence(item))
   }
 
-  private static getPreviousCardDecks(year : number, season : number, store : Store<State>) : CardDeck[] | undefined {
+  private getPreviousCardDecks(year : number, season : number) : CardDeck[] | undefined {
     let seasonData
     if (season > 1) {
-      const yearData = store.state.years[year - 1]
+      const yearData = this.state.years[year - 1]
       if (yearData) {
         seasonData = yearData.seasons[season - 2]
       }
     }
     else {
-      const yearData = store.state.years[year - 2]
+      const yearData = this.state.years[year - 2]
       if (yearData) {
         seasonData = yearData.seasons[yearData.seasons.length - 1]
       }
@@ -88,8 +89,8 @@ export default class NavigationState {
     }
   }
 
-  private static createNewCardDecks(botCount : number, store : Store<State>) : CardDeck[] {
-    const strategy = this.getActualStrategy(store)
+  private createNewCardDecks(botCount : number) : CardDeck[] {
+    const strategy = this.getActualStrategy()
     const cardDeck = [] as CardDeck[]
     for (let bot = 0; bot<botCount && bot<strategy.length; bot++) {
       cardDeck.push(CardDeck.new(strategy[bot]))
@@ -97,12 +98,12 @@ export default class NavigationState {
     return cardDeck
   }
 
-  private static getActualStrategy(store : Store<State>) : Strategy[] {
-    if (store.state.setup.actualStrategy) {
-      return store.state.setup.actualStrategy
+  private getActualStrategy() : Strategy[] {
+    if (this.state.setup.actualStrategy) {
+      return this.state.setup.actualStrategy
     }
-    const actualStrategy = getActualStrategy(store.state.setup.playerSetup.strategy)
-    store.commit('setupActualStrategy', actualStrategy)
+    const actualStrategy = getActualStrategy(this.state.setup.playerSetup.strategy)
+    this.state.setup.actualStrategy = actualStrategy
     return actualStrategy
   }
 

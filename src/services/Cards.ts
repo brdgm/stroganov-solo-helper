@@ -1,8 +1,8 @@
-import findMandatory from 'brdgm-commons/src/util/map/findMandatory';
-import Card from './Card';
-import Action from './enum/Action';
-import HuntSelection from './enum/HuntSelection';
-import Strategy from './enum/Strategy';
+import findMandatory from '@brdgm/brdgm-commons/src/util/map/findMandatory'
+import Card from './Card'
+import Action from './enum/Action'
+import HuntSelection from './enum/HuntSelection'
+import Strategy from './enum/Strategy'
 
 const cards = [
   {
