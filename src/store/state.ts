@@ -4,6 +4,8 @@ import PlayerColor from '@/services/enum/PlayerColor'
 import Strategy from '@/services/enum/Strategy'
 import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
+import Expansion from '@/services/enum/Expansion'
+import toggleArrayItem from '@brdgm/brdgm-commons/src/util/array/toggleArrayItem'
 
 export const useStateStore = defineStore(`${name}.store`, {
   state: () => {
@@ -38,6 +40,15 @@ export const useStateStore = defineStore(`${name}.store`, {
     resetGame() {
       this.setup.actualStrategy = undefined
       this.years = []
+    },
+    setupToggleExpansion(expansion: Expansion) : void {
+      if (!this.setup.expansions) {
+        this.setup.expansions = []
+      }
+      toggleArrayItem(this.setup.expansions, expansion)
+    },
+    hasExpansion(expansion: Expansion) : boolean {
+      return (this.setup.expansions ?? []).includes(expansion)
     }
   },
   persist: true
@@ -50,6 +61,7 @@ export interface State {
   years: Year[]
 }
 export interface Setup {
+  expansions?: Expansion[]
   difficultyLevel: DifficultyLevel
   playerSetup: PlayerSetup
   actualStrategy?: Strategy[]

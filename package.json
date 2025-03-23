@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/stroganov-solo-helper",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "private": true,
   "description": "Stroganov Solo Helper",
   "appDeployName": "stroganov",

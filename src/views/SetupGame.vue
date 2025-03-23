@@ -3,6 +3,7 @@
 
   <PlayersSetup/>
   <DifficultyLevel/>
+  <ExpansionsSetup/>
 
   <button class="btn btn-primary btn-lg mt-4" @click="startGame">
     {{t('action.startGame')}}
@@ -19,12 +20,14 @@ import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
 import { useStateStore } from '@/store/state'
+import ExpansionsSetup from '@/components/setup/ExpansionsSetup.vue'
 
 export default defineComponent({
   name: 'SetupGame',
   components: {
     PlayersSetup,
     DifficultyLevel,
+    ExpansionsSetup,
     FooterButtons
   },
   setup() {

@@ -1,12 +1,20 @@
 <template>
-  <div class="row mt-3 mb-3">
-    <div class="col" v-html="t('season.winter')"></div>
+  <div class="row mt-3">
+    <div class="col">
+      <p v-if="hasChipmunkMerchantExpansion">
+        <span v-html="t('season.winterChipmunkTrade1')"></span>
+        <AppIcon name="chipmunk" class="noteIcon"/>
+        <span v-html="t('season.winterChipmunkTrade2')"></span>
+      </p>
+      <p v-html="t('season.winter')"></p>
+    </div>
   </div>
-  <div class="row mt-3 mb-3" v-if="year==4">
+  <div class="row mt-1 mb-3" v-if="year==4">
     <h3 v-html="t('season.endOfGame')"></h3>
     <div class="col">
-      <p class="mt-3 mb-4"><b v-html="t('season.endOfGameInfo')"></b></p>
-      <p class="small" v-html="t('season.endOfGameActualStrategies')"></p>
+      <p class="mt-3"><b v-html="t('season.endOfGameInfo')"></b></p>
+      <p v-if="hasHuntingPlanExpansion" class="small" v-html="t('season.endOfGameHuntingPlanVP')"></p>
+      <p class="small mt-4" v-html="t('season.endOfGameActualStrategies')"></p>
       <ul class="small">
         <li v-for="bot in botCount" :key="bot">
           <PlayerColorDisplay :player-color="playerColors[bot]" :size-rem="1"/>
@@ -26,11 +34,14 @@ import Opponent from '@/services/enum/Opponent'
 import PlayerColor from '@/services/enum/PlayerColor'
 import PlayerColorDisplay from '../structure/PlayerColorDisplay.vue'
 import { useStateStore } from '@/store/state'
+import Expansion from '@/services/enum/Expansion'
+import AppIcon from '../structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'WinterSeason',
   components: {
-    PlayerColorDisplay
+    PlayerColorDisplay,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()
@@ -52,6 +63,12 @@ export default defineComponent({
     },
     playerColors(): PlayerColor[] {
       return this.navigationState.playerColors
+    },
+    hasChipmunkMerchantExpansion() {
+      return this.state.hasExpansion(Expansion.TURUKHAN_CHIPMUNKS_MERCHANT)
+    },
+    hasHuntingPlanExpansion() : boolean {
+      return this.state.hasExpansion(Expansion.TURUKHAN_HUNTING_PLAN)
     }
   },
   methods: {
@@ -66,3 +83,11 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+  .noteIcon {
+    height: 1.75rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+</style>
