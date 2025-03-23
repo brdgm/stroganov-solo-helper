@@ -38,6 +38,8 @@
   "season": {
     "title": "Year {year}",
     "winter": "The opponent will take the most expensive (rightmost) song tile that he can pay for with story track steps.",
+    "winterChipmunkTrade1": "If the opponent has one",
+    "winterChipmunkTrade2": ", he immediately exchanges it with the traveling merchant.",
     "endOfGame": "End of Game",
     "endOfGameInfo": "Collect the end game Victory Points (VP).",
     "endOfGameActualStrategies": "Actual Strategies:",
@@ -46,7 +48,9 @@
       "playerTurnInfo": "Perform your turn.",
       "botTurn": "{opponent}'s turn",
       "tradeActionSpaceFur1": "Whenever the opponent gains a fur with the same value as the fur on the <b>trade action space</b>, he gains",
-      "tradeActionSpaceFur2": "instead."
+      "tradeActionSpaceFur2": "instead.",
+      "chipmunkMerchantTradeTwo1": "Whenever the opponent obtains a second",
+      "chipmunkMerchantTradeTwo2": ", he immediately exchanges them with the traveling merchant."
     },
     "action": {
       "move": "{steps} steps",

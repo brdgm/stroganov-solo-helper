@@ -31,13 +31,19 @@
       </div>
     </div>
   </div>
-  <div class="row mt-3" v-if="difficultyLevel > 2">
-    <div class="col small">
+
+  <ul class="small mt-3">
+    <li v-if="difficultyLevel > 2">
       <span v-html="t('season.actions.tradeActionSpaceFur1')"></span>
-      <AppIcon name="coin" class="coinNote"/>
+      <AppIcon name="coin" class="noteIcon"/>
       <span v-html="t('season.actions.tradeActionSpaceFur2')"></span>
-    </div>
-  </div>
+    </li>
+    <li v-if="hasChipmunkMerchantExpansion">
+      <span v-html="t('season.actions.chipmunkMerchantTradeTwo1')"></span>
+      <AppIcon name="chipmunk" class="noteIcon"/>
+      <span v-html="t('season.actions.chipmunkMerchantTradeTwo2')"></span>
+    </li>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -50,6 +56,8 @@ import Opponent from '@/services/enum/Opponent'
 import SeasonAction from './SeasonAction.vue'
 import CardDeck from '@/services/CardDeck'
 import AppIcon from '../structure/AppIcon.vue'
+import { useStateStore } from '@/store/state'
+import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
   name: 'SeasonActions',
@@ -60,7 +68,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     navigationState: {
@@ -88,6 +97,9 @@ export default defineComponent({
     },
     cardDeck() : CardDeck[] {
       return this.navigationState.cardDeck as CardDeck[]
+    },
+    hasChipmunkMerchantExpansion() {
+      return this.state.hasExpansion(Expansion.TURUKHAN_CHIPMUNKS_MERCHANT)
     }
   },
   methods: {
@@ -102,7 +114,7 @@ export default defineComponent({
   .playerColorIcon {
     margin-top: 0.25rem;
   }
-  .coinNote {
+  .noteIcon {
     height: 1.5rem;
     margin-left: 0.25rem;
     margin-right: 0.25rem;

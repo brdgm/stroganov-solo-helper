@@ -38,6 +38,8 @@
   "season": {
     "title": "Jahr {year}",
     "winter": "Der Gegner wählt das teuerste Liedplättchen (am weitesten rechts), das er mit Geschichtenpunkten zahlen kann.",
+    "winterChipmunkTrade1": "Wenn der Gegner ein",
+    "winterChipmunkTrade2": "hat, tauscht er es sofort mit dem reisenden Händler.",
     "endOfGame": "Spielende",
     "endOfGameInfo": "Ermittle die Siegpunkte (SP) zum Spielende.",
     "endOfGameActualStrategies": "Verfolgte Strategien:",
@@ -46,7 +48,9 @@
       "playerTurnInfo": "Führe deinen Zug aus.",
       "botTurn": "{opponent}s Zug",
       "tradeActionSpaceFur1": "Falls der Gegner 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem <b>Aktionsfeld Handel</b> erhält, erhält er stattdessen",
-      "tradeActionSpaceFur2": "."
+      "tradeActionSpaceFur2": ".",
+      "chipmunkMerchantTradeTwo1": "Immer wenn der Gegner ein zweites",
+      "chipmunkMerchantTradeTwo2": "erhält, tauscht er beide sofort mit dem reisenden Händler."
     },
     "action": {
       "move": "{steps} Schritte",
