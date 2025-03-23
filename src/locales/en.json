@@ -3,7 +3,7 @@
   "home": {
     "title": "Stroganov Solo Helper",
     "play1": "Play against Ivan or Katyusha, the Solo Mode opponents of <a href='https://boardgamegeek.com/boardgame/323156/stroganov' target='_blank' rel='noopener'><b>Stroganov</b></a>.",
-    "play2": "This helper application replaces the automa cards, and helps setting up the game with various difficulty levels. It's possible to play against up to three Ivans or Katyushas.",
+    "play2": "This helper application replaces the automa cards, and helps setting up the game with various difficulty levels. It's possible to play against up to three Ivans or Katyushas. The <a href='https://boardgamegeek.com/boardgameexpansion/387401/stroganov-turukhan' target='_blank' rel='noopener'>Turukhan</a> expansion is supported.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -25,21 +25,52 @@
       "hard": "Hard",
       "mediumInfo": "Whenever Ivan doesn't have the right fur to fully perform his additional action, he gains 1 coin instead.",
       "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead.",
-      "playerBoardB": "You can use one of the asymmetrical \"b\" sides of the player boards to make the game easier for you."
+      "playerBoardB": "You can use one of the asymmetrical \"Б\" sides of the player boards to make the game easier for you."
+    },
+    "expansions": {
+      "title": "Expansions",
+      "turukhan-chipmunks-merchant": "Turukhan: Chipmunks and the Traveling Merchant",
+      "turukhan-hunting-plan": "Turukhan: Hunting Plan",
+      "turukhan-new-landscape-tiles": "Turukhan: New Landscape Tiles",
+      "turukhan-diplomacy": "Turukhan: Diplomacy"
     }
   },
   "season": {
     "title": "Year {year}",
     "winter": "The opponent will take the most expensive (rightmost) song tile that he can pay for with story track steps.",
+    "winterChipmunkTrade1": "If the opponent has one",
+    "winterChipmunkTrade2": ", he immediately exchanges it with the traveling merchant.",
     "endOfGame": "End of Game",
     "endOfGameInfo": "Collect the end game Victory Points (VP).",
+    "endOfGameHuntingPlanVP": "The opponent receives 3/6/9/12/15 points for having hunted 1/2/3/4/5 furs of his hunting plan.",
     "endOfGameActualStrategies": "Actual Strategies:",
     "actions": {
       "playerTurn": "Your turn",
       "playerTurnInfo": "Perform your turn.",
       "botTurn": "{opponent}'s turn",
       "tradeActionSpaceFur1": "Whenever the opponent gains a fur with the same value as the fur on the <b>trade action space</b>, he gains",
-      "tradeActionSpaceFur2": "instead."
+      "tradeActionSpaceFur2": "instead.",
+      "chipmunkMerchantTradeTwo1": "Whenever the opponent obtains a second",
+      "chipmunkMerchantTradeTwo2": ", he immediately exchanges them with the traveling merchant.",
+      "newLandscapeTile": {
+        "title": "If the opponent acquires and A or Б landscape tile...",
+        "getATile": "Whenever Ivan obtains an A-tile he will immediately score 4 victory points. He does not use the benefit of the tile during the game but does count the tile for set collection.",
+        "getBTile": "Whenever Ivan acquires a Б-tile he immediately uses it to gain the benefit by paying one banner if able. If unable to pay a banner, he does not claim the benefit.",
+        "bTileSummerStart": "At the start of each summer Ivan will use the benefit of his previously acquired Б-tiles, provided he has enough banners to do so. If he has multiple Б-tiles and insufficient banners to use all of them, he will activate them in chronological order of acquisition, starting with the one he acquired first.",
+        "settlementOfYurtsTile": "If Ivan acquires the “Settlement of yurts” Б-tile, Ivan will always choose the yurt tile that gives five story points."
+      },
+      "diplomacy": {
+        "title": "Whenever the opponent moves over or stops on one tile marked for diplomacy...",
+        "firstTile": "If he moved over more then one such tiles, he will conduct diplomacy with the first such tile he reached.",
+        "tradeFur": {
+          "title": "He always trades his most precious fur to maximize the number of steps he can make on the diplomacy track. Specifically, Ivan will trade the first item on this list which he has:",
+          "bearFur": "an 8-value fur (bear)",
+          "coin": "1 coin",
+          "otherFur": "a 7 to 1-value fur (choosing the highest he has)",
+          "tigerFur": "a tiger fur"
+        },
+        "buyTile": "If Ivan wants to buy a tile marked for diplomacy with furs and/or coins on it, he does not take these into account to determine the cost of the tile nor does he acquire these items if he buys the tile. In that case, return the fur tiles to the bag and the coins to the general supply."
+      }
     },
     "action": {
       "move": "{steps} steps",

@@ -3,7 +3,7 @@
   "home": {
     "title": "Stroganov Solo Helper",
     "play1": "Spiele gegen Ivan oder Katjuscha, die Solospiel-Gegner von <a href='https://boardgamegeek.com/boardgame/323156/stroganov' target='_blank' rel='noopener'><b>Stroganov</b></a>.",
-    "play2": "Diese Applikation ersetzt die Automa-Karten, und vereinfacht das Aufsetzen mit verschiedenen Schwierigkeitsgraden. Es ist möglich gegen bis zu 3 Ivans oder Katjuschas zu spielen.",
+    "play2": "Diese Applikation ersetzt die Automa-Karten, und vereinfacht das Aufsetzen mit verschiedenen Schwierigkeitsgraden. Es ist möglich gegen bis zu 3 Ivans oder Katjuschas zu spielen. Die <a href='https://boardgamegeek.com/boardgameexpansion/387401/stroganov-turukhan' target='_blank' rel='noopener'>Turukhan</a>-Erweiterung kann verwendet werden.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -26,20 +26,51 @@
       "mediumInfo": "Falls Iwan nicht genügend Felle besitzt, um seine zusätzliche Aktion komplett auszuführen, erhält er stattdessen 1 Münze.",
       "hardInfo": "Falls Iwan 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem Aktionsfeld Handel erhält, erhält er stattdessen 1 Münze.",
       "playerBoardB": "Du kannst eine der individuellen \"b\"-Seiten der Spieler-Tableaus verwenden, um das Spiel für dich einfacher zu machen."
+    },
+    "expansions": {
+      "title": "Erweiterungen",
+      "turukhan-chipmunks-merchant": "Turukhan: Streifenhörnchen und der reisende Händler",
+      "turukhan-hunting-plan": "Turukhan: Jagdplan",
+      "turukhan-new-landscape-tiles": "Turukhan: Neue Landschaftsplättchen",
+      "turukhan-diplomacy": "Turukhan: Diplomatie"
     }
   },
   "season": {
     "title": "Jahr {year}",
     "winter": "Der Gegner wählt das teuerste Liedplättchen (am weitesten rechts), das er mit Geschichtenpunkten zahlen kann.",
+    "winterChipmunkTrade1": "Wenn der Gegner ein",
+    "winterChipmunkTrade2": "hat, tauscht er es sofort mit dem reisenden Händler.",
     "endOfGame": "Spielende",
     "endOfGameInfo": "Ermittle die Siegpunkte (SP) zum Spielende.",
+    "endOfGameHuntingPlanVP": "Der Gegener erhält 3/6/9/12/15 Punkte dafür, dass er 1/2/3/4/5 Felle seines Jagdplans gejagt hat.",
     "endOfGameActualStrategies": "Verfolgte Strategien:",
     "actions": {
       "playerTurn": "Dein Zug",
       "playerTurnInfo": "Führe deinen Zug aus.",
       "botTurn": "{opponent}s Zug",
       "tradeActionSpaceFur1": "Falls der Gegner 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem <b>Aktionsfeld Handel</b> erhält, erhält er stattdessen",
-      "tradeActionSpaceFur2": "."
+      "tradeActionSpaceFur2": ".",
+      "chipmunkMerchantTradeTwo1": "Immer wenn der Gegner ein zweites",
+      "chipmunkMerchantTradeTwo2": "erhält, tauscht er beide sofort mit dem reisenden Händler.",
+      "newLandscapeTile": {
+        "title": "Wenn der Gegner ein A- oder Б-Landschaftsplättchen erhält...",
+        "getATile": "Immer wenn Ivan ein A-Plättchen erlangt, erhält er sofort 4 Siegpunkte. Er nutzt zwar den Vorteil der Plättchen während des Spiels nicht, erhält aber bei Spielende Punkte für die gesammelten Sets.",
+        "getBTile": "Immer wenn Ivan ein Б-Plättchen erwirbt, nutzt er es sofort, um den Bonus zu erhalten, indem er, wenn möglich, ein Banner bezahlt. Wenn er nicht in der Lage ist, ein Banner zu bezahlen, verfällt der Bonus.",
+        "bTileSummerStart": "Zu Beginn eines jeden Sommers wird Ivan die Vorteile seiner zuvor erworbenen Б-Plättchen nutzen, vorausgesetzt, er hat genügend Banner dafür. Wenn er mehrere Б-Plättchen und nicht genügend Banner hat, um sie alle zu nutzen, aktiviert er sie in chronologischer Reihenfolge des Erwerbs, beginnend mit dem zuerst erworbenen.",
+        "settlementOfYurtsTile": "Wenn Ivan das Б-Plättchen „Jurtensiedlung“ erwirbt, wählt Ivan immer das Jurtenplättchen, das fünf Geschichten-Punkte bringt."
+      },
+      "diplomacy": {
+        "title": "Immer wenn der Gegener sich über eine Landschaften mit Diplomatie-Marker bewegt oder dort stehen bleibt, führt er Diplomatie durch...",
+        "firstTile": "Wenn er sich über mehrere solcher Landschaften bewegt hat, führt der Diplomatie mit dem ersten Plättchen aus, das er erreicht hat.",
+        "tradeFur": {
+          "title": "Er tauscht immer sein wertvollstes Fell, um die Anzahl der Schritte, die er auf der Diplomatieleiste machen kann, zu maximieren. Insbesondere wird Ivan den ersten Artikel auf dieser Liste tauschen, den er hat:",
+          "bearFur": "ein 8-wertiges Fell (Bär)",
+          "coin": "1 Münze",
+          "otherFur": "ein Fell mit dem Wert 7 bis 1 (wähle das höchste Fell, das er besitzt)",
+          "tigerFur": "ein Tigerfell"
+        },
+        "buyTile": "Wenn Ivan eine für Diplomatie markierte Landschaft mit Fellen und/oder Münzen darauf kaufen möchte, berücksichtigt er diese weder bei der Ermittlung der Kosten der Landschaft noch erwirbt er diese Gegenstände, wenn er sie kauft. In diesem Fall werden die Fellplättchen in den Beutel und die Münzen in den allgemeinen Vorrat zurückgelegt."
+      }
     },
     "action": {
       "move": "{steps} Schritte",

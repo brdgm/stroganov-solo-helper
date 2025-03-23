@@ -5,7 +5,11 @@
       <span v-html="t('season.action.move',{steps:moveEastSteps})" class="desc"></span>
     </li>
     <li>
-      <AppIcon name="hunting"/>:      
+      <AppIcon name="hunting"/>:
+      <template v-if="hasHuntingPlanExpansion">
+        <AppIcon name="hunting-plan" class="huntingPlan"/>
+        <span v-html="t('season.action.or')" class="or"></span>
+      </template>
       <table class="hunting">
         <tbody>
           <tr>
@@ -76,6 +80,8 @@ import CardDeck from '@/services/CardDeck'
 import HuntSelection from '@/services/enum/HuntSelection'
 import Action from '@/services/enum/Action'
 import AppIcon from '../structure/AppIcon.vue'
+import Expansion from '@/services/enum/Expansion'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'SeasonAction',
@@ -84,7 +90,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     cardDeck: {
@@ -120,6 +127,9 @@ export default defineComponent({
     },
     fur3Active() : boolean {
       return this.huntSelectionHighest
+    },
+    hasHuntingPlanExpansion() : boolean {
+      return this.state.hasExpansion(Expansion.TURUKHAN_HUNTING_PLAN)
     }
   }
 })
@@ -150,8 +160,8 @@ export default defineComponent({
   .or {
     font-weight: bold;
     font-style: italic;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
   }
   .coin {
     height: 1.75rem;
@@ -180,5 +190,8 @@ export default defineComponent({
   }
   .landscape-buy-full-cost {
     height: 4rem;
+  }
+  .huntingPlan {
+    height: 6rem;
   }
 </style>
