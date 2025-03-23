@@ -26,6 +26,13 @@
       "mediumInfo": "Falls Iwan nicht genügend Felle besitzt, um seine zusätzliche Aktion komplett auszuführen, erhält er stattdessen 1 Münze.",
       "hardInfo": "Falls Iwan 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem Aktionsfeld Handel erhält, erhält er stattdessen 1 Münze.",
       "playerBoardB": "Du kannst eine der individuellen \"b\"-Seiten der Spieler-Tableaus verwenden, um das Spiel für dich einfacher zu machen."
+    },
+    "expansions": {
+      "title": "Erweiterungen",
+      "turukhan-chipmunks-merchant": "Turukhan: Streifenhörnchen und der reisende Händler",
+      "turukhan-hunting-plan": "Turukhan: Jagdplan",
+      "turukhan-new-landscape-tiles": "Turukhan: Neue Landschaftsplättchen",
+      "turukhan-diplomacy": "Turukhan: Diplomatie"
     }
   },
   "season": {

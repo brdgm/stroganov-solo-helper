@@ -26,6 +26,13 @@
       "mediumInfo": "Whenever Ivan doesn't have the right fur to fully perform his additional action, he gains 1 coin instead.",
       "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead.",
       "playerBoardB": "You can use one of the asymmetrical \"b\" sides of the player boards to make the game easier for you."
+    },
+    "expansions": {
+      "title": "Expansions",
+      "turukhan-chipmunks-merchant": "Turukhan: Chipmunks and the Traveling Merchant",
+      "turukhan-hunting-plan": "Turukhan: Hunting Plan",
+      "turukhan-new-landscape-tiles": "Turukhan: New Landscape Tiles",
+      "turukhan-diplomacy": "Turukhan: Diplomacy"
     }
   },
   "season": {
