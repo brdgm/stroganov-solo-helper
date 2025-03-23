@@ -12,8 +12,9 @@
   <div class="row mt-1 mb-3" v-if="year==4">
     <h3 v-html="t('season.endOfGame')"></h3>
     <div class="col">
-      <p class="mt-3 mb-4"><b v-html="t('season.endOfGameInfo')"></b></p>
-      <p class="small" v-html="t('season.endOfGameActualStrategies')"></p>
+      <p class="mt-3"><b v-html="t('season.endOfGameInfo')"></b></p>
+      <p v-if="hasHuntingPlanExpansion" class="small" v-html="t('season.endOfGameHuntingPlanVP')"></p>
+      <p class="small mt-4" v-html="t('season.endOfGameActualStrategies')"></p>
       <ul class="small">
         <li v-for="bot in botCount" :key="bot">
           <PlayerColorDisplay :player-color="playerColors[bot]" :size-rem="1"/>
@@ -65,6 +66,9 @@ export default defineComponent({
     },
     hasChipmunkMerchantExpansion() {
       return this.state.hasExpansion(Expansion.TURUKHAN_CHIPMUNKS_MERCHANT)
+    },
+    hasHuntingPlanExpansion() : boolean {
+      return this.state.hasExpansion(Expansion.TURUKHAN_HUNTING_PLAN)
     }
   },
   methods: {

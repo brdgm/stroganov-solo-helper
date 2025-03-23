@@ -42,6 +42,7 @@
     "winterChipmunkTrade2": "hat, tauscht er es sofort mit dem reisenden Händler.",
     "endOfGame": "Spielende",
     "endOfGameInfo": "Ermittle die Siegpunkte (SP) zum Spielende.",
+    "endOfGameHuntingPlanVP": "Der Gegener erhält 3/6/9/12/15 Punkte dafür, dass er 1/2/3/4/5 Felle seines Jagdplans gejagt hat.",
     "endOfGameActualStrategies": "Verfolgte Strategien:",
     "actions": {
       "playerTurn": "Dein Zug",

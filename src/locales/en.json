@@ -42,6 +42,7 @@
     "winterChipmunkTrade2": ", he immediately exchanges it with the traveling merchant.",
     "endOfGame": "End of Game",
     "endOfGameInfo": "Collect the end game Victory Points (VP).",
+    "endOfGameHuntingPlanVP": "The opponent receives 3/6/9/12/15 points for having hunted 1/2/3/4/5 furs of his hunting plan.",
     "endOfGameActualStrategies": "Actual Strategies:",
     "actions": {
       "playerTurn": "Your turn",
