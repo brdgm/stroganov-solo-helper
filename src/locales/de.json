@@ -58,6 +58,18 @@
         "getBTile": "Immer wenn Ivan ein Б-Plättchen erwirbt, nutzt er es sofort, um den Bonus zu erhalten, indem er, wenn möglich, ein Banner bezahlt. Wenn er nicht in der Lage ist, ein Banner zu bezahlen, verfällt der Bonus.",
         "bTileSummerStart": "Zu Beginn eines jeden Sommers wird Ivan die Vorteile seiner zuvor erworbenen Б-Plättchen nutzen, vorausgesetzt, er hat genügend Banner dafür. Wenn er mehrere Б-Plättchen und nicht genügend Banner hat, um sie alle zu nutzen, aktiviert er sie in chronologischer Reihenfolge des Erwerbs, beginnend mit dem zuerst erworbenen.",
         "settlementOfYurtsTile": "Wenn Ivan das Б-Plättchen „Jurtensiedlung“ erwirbt, wählt Ivan immer das Jurtenplättchen, das fünf Geschichten-Punkte bringt."
+      },
+      "diplomacy": {
+        "title": "Immer wenn der Gegener sich über eine Landschaften mit Diplomatie-Marker bewegt oder dort stehen bleibt, führt er Diplomatie durch...",
+        "firstTile": "Wenn er sich über mehrere solcher Landschaften bewegt hat, führt der Diplomatie mit dem ersten Plättchen aus, das er erreicht hat.",
+        "tradeFur": {
+          "title": "Er tauscht immer sein wertvollstes Fell, um die Anzahl der Schritte, die er auf der Diplomatieleiste machen kann, zu maximieren. Insbesondere wird Ivan den ersten Artikel auf dieser Liste tauschen, den er hat:",
+          "bearFur": "ein 8-wertiges Fell (Bär)",
+          "coin": "1 Münze",
+          "otherFur": "ein Fell mit dem Wert 7 bis 1 (wähle das höchste Fell, das er besitzt)",
+          "tigerFur": "ein Tigerfell"
+        },
+        "buyTile": "Wenn Ivan eine für Diplomatie markierte Landschaft mit Fellen und/oder Münzen darauf kaufen möchte, berücksichtigt er diese weder bei der Ermittlung der Kosten der Landschaft noch erwirbt er diese Gegenstände, wenn er sie kauft. In diesem Fall werden die Fellplättchen in den Beutel und die Münzen in den allgemeinen Vorrat zurückgelegt."
       }
     },
     "action": {

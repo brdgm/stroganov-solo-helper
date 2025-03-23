@@ -52,6 +52,22 @@
         <li v-html="t('season.actions.newLandscapeTile.settlementOfYurtsTile')"></li>
       </ul>
     </li>
+    <li v-if="hasDiplomacyExpansion">
+      <a href="#diplomacyExpansionDetailsCollapse" data-bs-toggle="collapse" v-html="t('season.actions.diplomacy.title')"></a>
+      <ul class="collapse" id="diplomacyExpansionDetailsCollapse">
+        <li v-html="t('season.actions.diplomacy.firstTile')"></li>
+        <li>
+          <span v-html="t('season.actions.diplomacy.tradeFur.title')"></span>
+          <ul>
+            <li v-html="t('season.actions.diplomacy.tradeFur.bearFur')"></li>
+            <li v-html="t('season.actions.diplomacy.tradeFur.coin')"></li>
+            <li v-html="t('season.actions.diplomacy.tradeFur.otherFur')"></li>
+            <li v-html="t('season.actions.diplomacy.tradeFur.tigerFur')"></li>
+          </ul>
+        </li>
+        <li v-html="t('season.actions.diplomacy.buyTile')"></li>
+      </ul>
+    </li>
   </ul>
 </template>
 
@@ -112,6 +128,9 @@ export default defineComponent({
     },
     hasNewLandscapeTilesExpansion() {
       return this.state.hasExpansion(Expansion.TURUKHAN_NEW_LANDSCAPE_TILES)
+    },
+    hasDiplomacyExpansion() {
+      return this.state.hasExpansion(Expansion.TURUKHAN_DIPLOMACY)
     }
   },
   methods: {

@@ -58,6 +58,18 @@
         "getBTile": "Whenever Ivan acquires a Б-tile he immediately uses it to gain the benefit by paying one banner if able. If unable to pay a banner, he does not claim the benefit.",
         "bTileSummerStart": "At the start of each summer Ivan will use the benefit of his previously acquired Б-tiles, provided he has enough banners to do so. If he has multiple Б-tiles and insufficient banners to use all of them, he will activate them in chronological order of acquisition, starting with the one he acquired first.",
         "settlementOfYurtsTile": "If Ivan acquires the “Settlement of yurts” Б-tile, Ivan will always choose the yurt tile that gives five story points."
+      },
+      "diplomacy": {
+        "title": "Whenever the opponent moves over or stops on one tile marked for diplomacy...",
+        "firstTile": "If he moved over more then one such tiles, he will conduct diplomacy with the first such tile he reached.",
+        "tradeFur": {
+          "title": "He always trades his most precious fur to maximize the number of steps he can make on the diplomacy track. Specifically, Ivan will trade the first item on this list which he has:",
+          "bearFur": "an 8-value fur (bear)",
+          "coin": "1 coin",
+          "otherFur": "a 7 to 1-value fur (choosing the highest he has)",
+          "tigerFur": "a tiger fur"
+        },
+        "buyTile": "If Ivan wants to buy a tile marked for diplomacy with furs and/or coins on it, he does not take these into account to determine the cost of the tile nor does he acquire these items if he buys the tile. In that case, return the fur tiles to the bag and the coins to the general supply."
       }
     },
     "action": {
