@@ -51,7 +51,14 @@
       "tradeActionSpaceFur1": "Falls der Gegner 1 Fell mit der gleichen Wertigkeit wie das Fell auf dem <b>Aktionsfeld Handel</b> erhält, erhält er stattdessen",
       "tradeActionSpaceFur2": ".",
       "chipmunkMerchantTradeTwo1": "Immer wenn der Gegner ein zweites",
-      "chipmunkMerchantTradeTwo2": "erhält, tauscht er beide sofort mit dem reisenden Händler."
+      "chipmunkMerchantTradeTwo2": "erhält, tauscht er beide sofort mit dem reisenden Händler.",
+      "newLandscapeTile": {
+        "title": "Wenn der Gegner ein A- oder Б-Landschaftsplättchen erhält...",
+        "getATile": "Immer wenn Ivan ein A-Plättchen erlangt, erhält er sofort 4 Siegpunkte. Er nutzt zwar den Vorteil der Plättchen während des Spiels nicht, erhält aber bei Spielende Punkte für die gesammelten Sets.",
+        "getBTile": "Immer wenn Ivan ein Б-Plättchen erwirbt, nutzt er es sofort, um den Bonus zu erhalten, indem er, wenn möglich, ein Banner bezahlt. Wenn er nicht in der Lage ist, ein Banner zu bezahlen, verfällt der Bonus.",
+        "bTileSummerStart": "Zu Beginn eines jeden Sommers wird Ivan die Vorteile seiner zuvor erworbenen Б-Plättchen nutzen, vorausgesetzt, er hat genügend Banner dafür. Wenn er mehrere Б-Plättchen und nicht genügend Banner hat, um sie alle zu nutzen, aktiviert er sie in chronologischer Reihenfolge des Erwerbs, beginnend mit dem zuerst erworbenen.",
+        "settlementOfYurtsTile": "Wenn Ivan das Б-Plättchen „Jurtensiedlung“ erwirbt, wählt Ivan immer das Jurtenplättchen, das fünf Geschichten-Punkte bringt."
+      }
     },
     "action": {
       "move": "{steps} Schritte",

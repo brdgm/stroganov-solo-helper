@@ -25,7 +25,7 @@
       "hard": "Hard",
       "mediumInfo": "Whenever Ivan doesn't have the right fur to fully perform his additional action, he gains 1 coin instead.",
       "hardInfo": "Whenever Ivan gains a fur with the same value as the fur on the trade action space, he gains one coin instead.",
-      "playerBoardB": "You can use one of the asymmetrical \"b\" sides of the player boards to make the game easier for you."
+      "playerBoardB": "You can use one of the asymmetrical \"Б\" sides of the player boards to make the game easier for you."
     },
     "expansions": {
       "title": "Expansions",
@@ -51,7 +51,14 @@
       "tradeActionSpaceFur1": "Whenever the opponent gains a fur with the same value as the fur on the <b>trade action space</b>, he gains",
       "tradeActionSpaceFur2": "instead.",
       "chipmunkMerchantTradeTwo1": "Whenever the opponent obtains a second",
-      "chipmunkMerchantTradeTwo2": ", he immediately exchanges them with the traveling merchant."
+      "chipmunkMerchantTradeTwo2": ", he immediately exchanges them with the traveling merchant.",
+      "newLandscapeTile": {
+        "title": "If the opponent acquires and A or Б landscape tile...",
+        "getATile": "Whenever Ivan obtains an A-tile he will immediately score 4 victory points. He does not use the benefit of the tile during the game but does count the tile for set collection.",
+        "getBTile": "Whenever Ivan acquires a Б-tile he immediately uses it to gain the benefit by paying one banner if able. If unable to pay a banner, he does not claim the benefit.",
+        "bTileSummerStart": "At the start of each summer Ivan will use the benefit of his previously acquired Б-tiles, provided he has enough banners to do so. If he has multiple Б-tiles and insufficient banners to use all of them, he will activate them in chronological order of acquisition, starting with the one he acquired first.",
+        "settlementOfYurtsTile": "If Ivan acquires the “Settlement of yurts” Б-tile, Ivan will always choose the yurt tile that gives five story points."
+      }
     },
     "action": {
       "move": "{steps} steps",

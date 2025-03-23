@@ -43,6 +43,15 @@
       <AppIcon name="chipmunk" class="noteIcon"/>
       <span v-html="t('season.actions.chipmunkMerchantTradeTwo2')"></span>
     </li>
+    <li v-if="hasNewLandscapeTilesExpansion">
+      <a href="#newLandscapeTilesExpansionDetailsCollapse" data-bs-toggle="collapse" v-html="t('season.actions.newLandscapeTile.title')"></a>
+      <ul class="collapse" id="newLandscapeTilesExpansionDetailsCollapse">
+        <li v-html="t('season.actions.newLandscapeTile.getATile')"></li>
+        <li v-html="t('season.actions.newLandscapeTile.getBTile')"></li>
+        <li v-html="t('season.actions.newLandscapeTile.bTileSummerStart')"></li>
+        <li v-html="t('season.actions.newLandscapeTile.settlementOfYurtsTile')"></li>
+      </ul>
+    </li>
   </ul>
 </template>
 
@@ -100,6 +109,9 @@ export default defineComponent({
     },
     hasChipmunkMerchantExpansion() {
       return this.state.hasExpansion(Expansion.TURUKHAN_CHIPMUNKS_MERCHANT)
+    },
+    hasNewLandscapeTilesExpansion() {
+      return this.state.hasExpansion(Expansion.TURUKHAN_NEW_LANDSCAPE_TILES)
     }
   },
   methods: {
