@@ -59,7 +59,9 @@ export default class NavigationState {
         cardDeck = this.createNewCardDecks(botCount)
       }
       // draw next card for each card deck
-      cardDeck.forEach(item => item.draw())
+      for (const item of cardDeck) {
+        item.draw()
+      }
       seasonData.cardDeck = cardDeck.map(item => item.toPersistence())
       this.state.season(seasonData)
     }
