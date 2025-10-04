@@ -7,7 +7,7 @@ import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
  * @param selectedStrategy Selected strategies
  * @returns Actual strategies
  */
-export default function (selectedStrategy : Strategy[]) : Strategy[] {
+export default function getActualStrategy(selectedStrategy : Strategy[]) : Strategy[] {
   return selectedStrategy.map(mapActualPlayerStrategyItem)
 }
 
