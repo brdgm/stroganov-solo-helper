@@ -27,8 +27,8 @@ export default class NavigationState {
     this.botOpponent = setup.playerSetup.opponent
     this.playerColors = setup.playerSetup.playerColors
 
-    this.year = parseInt(route.params['year'] as string)
-    this.season = parseInt(route.params['season'] as string)
+    this.year = Number.parseInt(route.params['year'] as string)
+    this.season = Number.parseInt(route.params['season'] as string)
     this.cardDeck = this.getCardDecks(this.year, this.season, this.botCount)
   }
 
@@ -59,7 +59,9 @@ export default class NavigationState {
         cardDeck = this.createNewCardDecks(botCount)
       }
       // draw next card for each card deck
-      cardDeck.forEach(item => item.draw())
+      for (const item of cardDeck) {
+        item.draw()
+      }
       seasonData.cardDeck = cardDeck.map(item => item.toPersistence())
       this.state.season(seasonData)
     }
