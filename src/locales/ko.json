@@ -1,0 +1,137 @@
+{
+  "gameTitle": "스트로가노프",
+  "home": {
+    "title": "스트로가노프 솔로 도우미",
+    "play1": "<a href='https://boardgamegeek.com/boardgame/323156/stroganov' target='_blank' rel='noopener'><b>스트로가노프</b></a>의 솔로 모드 상대인 이반이나 카츄샤와 플레이하세요.",
+    "play2": "이 도우미 애플리케이션은 오토마 카드를 대체하고 다양한 난이도로 게임을 설정하는 데 도움을 줍니다. 최대 3명의 이반이나 카츄샤와 플레이할 수 있습니다. <a href='https://boardgamegeek.com/boardgameexpansion/387401/stroganov-turukhan' target='_blank' rel='noopener'>투루한</a> 확장판을 지원합니다.",
+    "feedback": "토론 및 피드백:"
+  },
+  "setup": {
+    "title": "게임 설정",
+    "players": {
+      "titlePlayer": "플레이어",
+      "playerColor": "플레이어 색상",
+      "titleBot": "상대",
+      "botCount": "상대 수",
+      "multipleBots": "여러 솔로 상대와의 플레이는 규칙에서 지원되지 않습니다. 이반의 플레이어 보드를 복사해야 합니다.",
+      "botCountItem": "오토마 {count}개 | 오토마 {count}개 (실험적)",
+      "opponent": "상대 | 상대 {bot}",
+      "strategy": "전략 | 전략 {bot}",
+      "botColor": "상대 색상 | 상대 색상 {bot}"
+    },
+    "difficultyLevel": {
+      "title": "난이도",
+      "easy": "쉬움",
+      "hard": "어려움",
+      "mediumInfo": "이반이 추가 행동을 완전히 수행할 적절한 모피를 가지고 있지 않을 때마다 대신 동전 1개를 얻습니다.",
+      "hardInfo": "이반이 무역 행동 공간의 모피와 같은 가치의 모피를 얻을 때마다 대신 동전 1개를 얻습니다.",
+      "playerBoardB": "비대칭 \"Б\" 면의 플레이어 보드 중 하나를 사용하여 게임을 더 쉽게 만들 수 있습니다."
+    },
+    "expansions": {
+      "title": "확장판",
+      "turukhan-chipmunks-merchant": "투루한: 다람쥐와 여행 상인",
+      "turukhan-hunting-plan": "투루한: 사냥 계획",
+      "turukhan-new-landscape-tiles": "투루한: 새로운 지형 타일",
+      "turukhan-diplomacy": "투루한: 외교"
+    }
+  },
+  "season": {
+    "title": "Year {year}",
+    "winter": "상대는 스토리 트랙 스텝으로 지불할 수 있는 가장 비싼(가장 오른쪽) 노래 타일을 가져갑니다.",
+    "winterChipmunkTrade1": "상대가",
+    "winterChipmunkTrade2": "을(를) 가지고 있다면, 즉시 여행 상인과 교환합니다.",
+    "endOfGame": "게임 종료",
+    "endOfGameInfo": "게임 종료 승리 포인트(VP)를 획득합니다.",
+    "endOfGameHuntingPlanVP": "상대는 사냥 계획의 모피 1/2/3/4/5개를 사냥한 것에 대해 3/6/9/12/15점을 받습니다.",
+    "endOfGameActualStrategies": "실제 전략:",
+    "actions": {
+      "playerTurn": "당신의 턴",
+      "playerTurnInfo": "당신의 턴을 진행하세요.",
+      "botTurn": "{opponent}의 턴",
+      "tradeActionSpaceFur1": "상대가 <b>무역 행동 공간</b>의 모피와 같은 가치의 모피를 얻을 때마다",
+      "tradeActionSpaceFur2": "를 대신 얻습니다.",
+      "chipmunkMerchantTradeTwo1": "상대가 두 번째",
+      "chipmunkMerchantTradeTwo2": "를 얻을 때마다 즉시 여행 상인과 교환합니다.",
+      "newLandscapeTile": {
+        "title": "상대가 A 또는 Б 지형 타일을 획득하는 경우...",
+        "getATile": "이반이 A-타일을 얻을 때마다 즉시 승리 포인트 4점을 획득합니다. 게임 중에는 타일의 이익을 사용하지 않지만 세트 수집을 위해 타일을 계산합니다.",
+        "getBTile": "이반이 Б-타일을 획득할 때마다 가능하다면 깃발 1개를 지불하여 즉시 사용해 이익을 얻습니다. 깃발을 지불할 수 없다면 이익을 얻지 않습니다.",
+        "bTileSummerStart": "각 여름 시작 시 이반은 충분한 깃발을 가지고 있다면 이전에 획득한 Б-타일들의 이익을 사용합니다. 여러 Б-타일을 가지고 있지만 모두 사용할 만큼 충분한 깃발이 없다면, 획득한 순서대로 먼저 획득한 것부터 활성화합니다.",
+        "settlementOfYurtsTile": "이반이 \"유르트 정착지\" Б-타일을 획득하면, 이반은 항상 5 스토리 포인트를 주는 유르트 타일을 선택합니다."
+      },
+      "diplomacy": {
+        "title": "상대가 외교용으로 표시된 타일을 지나거나 멈출 때마다...",
+        "firstTile": "그런 타일을 여러 개 지났다면, 도달한 첫 번째 타일과 외교를 진행합니다.",
+        "tradeFur": {
+          "title": "그는 외교 트랙에서 만들 수 있는 단계 수를 최대화하기 위해 항상 가장 귀중한 모피를 교환합니다. 구체적으로, 이반은 가지고 있는 이 목록의 첫 번째 항목을 교환합니다:",
+          "bearFur": "8 가치 모피 (곰)",
+          "coin": "동전 1개",
+          "otherFur": "7~1 가치 모피 (가지고 있는 것 중 가장 높은 것 선택)",
+          "tigerFur": "호랑이 모피"
+        },
+        "buyTile": "이반이 모피와/또는 동전이 있는 외교용 표시된 타일을 구매하려고 할 때, 타일의 비용을 결정할 때 이것들을 고려하지 않으며 타일을 구매해도 이 아이템들을 획득하지 않습니다. 이 경우 모피 타일은 주머니에, 동전은 공통 보급품에 반환합니다."
+      }
+    },
+    "action": {
+      "move": "{steps}칸 이동",
+      "or": "또는",
+      "ifEmpty": "(비어있다면)",
+      "ifPossible": "(가능하다면)",
+      "claimLandscape": "지형 획득 (비어있다면)",
+      "visitVillage": "마을 방문 (코삭 지역)",
+      "outpost": "전초기지 건설 또는 새 전초기지 획득",
+      "trophy": "트로피 획득",
+      "yurt": "유르트 사용",
+      "tsar-wish": "차르의 소원 획득",
+      "claim-landscape-full-cost": "전체 비용으로 지형 타일 획득"
+    }
+  },
+  "opponent": {
+    "ivan": "이반",
+    "katyusha": "카츄샤"
+  },
+  "opponentSuffix": {
+    "ivan": "",
+    "katyusha": "(더 어려움)"
+  },
+  "strategy": {
+    "none": "없음 (무작위 카드)",
+    "hidden": "숨김 (무작위로 선택된 전략)",
+    "outposts-trophies": "전초기지 & 트로피",
+    "outposts-landscape-tiles": "전초기지 & 지형 타일",
+    "outposts-tsars-wishes": "전초기지 & 차르의 소원",
+    "trophies-landscape-tiles": "트로피 & 지형 타일",
+    "trophies-tsars-wishes": "트로피 & 차르의 소원",
+    "landscape-tiles-tsars-wishes": "지형 타일 & 차르의 소원"
+  },
+  "seasonName": {
+    "spring": "봄",
+    "summer": "여름",
+    "autumn": "가을",
+    "winter": "겨울"
+  },
+  "notfound": {
+    "title": "찾을 수 없음"
+  },
+  "action": {
+    "playGame": "게임 플레이",
+    "startGame": "게임 시작",
+    "next": "다음",
+    "nextRound": "다음 라운드",
+    "abortGame": "게임 중단",
+    "abortGameConfirm": "진행 중인 게임을 중단합니다 - 확실한가요?",
+    "endGame": "게임 종료",
+    "endGameConfirm": "이 게임을 종료하고 홈 화면으로 돌아갑니다 - 확실한가요?",
+    "cancel": "취소",
+    "backToHome": "홈으로 돌아가기",
+    "back": "뒤로",
+    "close": "닫기"
+  },
+  "footer": {
+    "credits": "크레딧"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "앱 새로고침",
+    "notice": "애플리케이션이 업데이트되었습니다 - 최신 버전을 사용하기 위해 새로고침하시겠습니까?"
+  }
+}
