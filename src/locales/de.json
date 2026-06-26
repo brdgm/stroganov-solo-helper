@@ -42,7 +42,7 @@
     "winterChipmunkTrade2": "hat, tauscht er es sofort mit dem reisenden Händler.",
     "endOfGame": "Spielende",
     "endOfGameInfo": "Ermittle die Siegpunkte (SP) zum Spielende.",
-    "endOfGameHuntingPlanVP": "Der Gegener erhält 3/6/9/12/15 Punkte dafür, dass er 1/2/3/4/5 Felle seines Jagdplans gejagt hat.",
+    "endOfGameHuntingPlanVP": "Der Gegner erhält 3/6/9/12/15 Punkte dafür, dass er 1/2/3/4/5 Felle seines Jagdplans gejagt hat.",
     "endOfGameActualStrategies": "Verfolgte Strategien:",
     "actions": {
       "playerTurn": "Dein Zug",
@@ -60,8 +60,8 @@
         "settlementOfYurtsTile": "Wenn Ivan das Б-Plättchen „Jurtensiedlung“ erwirbt, wählt Ivan immer das Jurtenplättchen, das fünf Geschichten-Punkte bringt."
       },
       "diplomacy": {
-        "title": "Immer wenn der Gegener sich über eine Landschaften mit Diplomatie-Marker bewegt oder dort stehen bleibt, führt er Diplomatie durch...",
-        "firstTile": "Wenn er sich über mehrere solcher Landschaften bewegt hat, führt der Diplomatie mit dem ersten Plättchen aus, das er erreicht hat.",
+        "title": "Immer wenn der Gegner sich über eine Landschaft mit Diplomatie-Marker bewegt oder dort stehen bleibt, führt er Diplomatie durch...",
+        "firstTile": "Wenn er sich über mehrere solcher Landschaften bewegt hat, führt er Diplomatie mit dem ersten Plättchen aus, das er erreicht hat.",
         "tradeFur": {
           "title": "Er tauscht immer sein wertvollstes Fell, um die Anzahl der Schritte, die er auf der Diplomatieleiste machen kann, zu maximieren. Insbesondere wird Ivan den ersten Artikel auf dieser Liste tauschen, den er hat:",
           "bearFur": "ein 8-wertiges Fell (Bär)",
